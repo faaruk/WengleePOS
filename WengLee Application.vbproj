@@ -1,0 +1,1148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E1CC93C9-157A-493E-8966-790E3D54114B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WengLee_Application.My.MyApplication</StartupObject>
+    <RootNamespace>WengLee_Application</RootNamespace>
+    <AssemblyName>WengLee</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\WengleeApp2\</OutputPath>
+    <DocumentationFile>WengLee.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>WengLee.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D3C21E2C4E5BB5BDC2D4FC5E7A646338927886F4</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>WengLee Application_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>Internet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>WengLee Application_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Kiosk CAM\Kiosk Cam\Kiosk Cam\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Data">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Xml">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Core">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="WhatsAppApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WhatsAppAPI.15.4.29\lib\net40\WhatsAppApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Data.SqlClient" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="classes\Gmail\clsGmail.vb" />
+    <Compile Include="classes\map\frmViewMap.Designer.vb">
+      <DependentUpon>frmViewMap.vb</DependentUpon>
+    </Compile>
+    <Compile Include="classes\map\frmViewMap.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="classes\others\VersionControl.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblBranch.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblChatMSG.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblCustomer.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblCustomer_BOL.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblInvoiceStatus.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblMasterItems.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblNotes.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblOrder.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblOrderItems.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblOrderSchedule.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblOrderScheduleItems.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblOrderStatus.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblProductPrice.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblProducts.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblProductSub.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblPurchase.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblRoute.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblRouteOrders.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblSession.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblSettings.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblState.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblStock.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblSubStock.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblTarget.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblTask.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblTemplate.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblTemplateItems.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblUserDetails.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblUserLoginInfo.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblUserRules.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblVendor.vb" />
+    <Compile Include="classes\tables\autocodes\cls_t_tblVersion.vb" />
+    <Compile Include="classes\tables\autocodes\Database_tables.vb" />
+    <Compile Include="classes\tables\cls_demotablesclass.vb" />
+    <Compile Include="classes\tables\cls_tblCustomer.vb" />
+    <Compile Include="classes\tables\cls_tblCustomer_BOL.vb" />
+    <Compile Include="classes\tables\cls_tblInvoiceStatus.vb" />
+    <Compile Include="classes\tables\cls_tblMasterItems.vb" />
+    <Compile Include="classes\tables\cls_tblOrder.vb" />
+    <Compile Include="classes\tables\cls_tblOrderItems.vb" />
+    <Compile Include="classes\tables\cls_tblOrderSchedule.vb" />
+    <Compile Include="classes\tables\cls_tblOrderScheduleItems.vb" />
+    <Compile Include="classes\tables\cls_tblOrderStatus.vb" />
+    <Compile Include="classes\tables\cls_tblProductPrice.vb" />
+    <Compile Include="classes\tables\cls_tblProducts.vb" />
+    <Compile Include="classes\tables\cls_tblPurchase.vb" />
+    <Compile Include="classes\tables\cls_tblRoute.vb" />
+    <Compile Include="classes\tables\cls_tblRouteOrders.vb" />
+    <Compile Include="classes\tables\cls_tblSettings.vb" />
+    <Compile Include="classes\tables\cls_tblStock.vb" />
+    <Compile Include="classes\tables\cls_tblTarget.vb" />
+    <Compile Include="classes\tables\cls_tblTemplate.vb" />
+    <Compile Include="classes\tables\cls_tblTemplateItems.vb" />
+    <Compile Include="classes\tables\cls_tblUser.vb" />
+    <Compile Include="classes\tables\cls_tblUserLoginInfo.vb" />
+    <Compile Include="classes\tables\cls_tblUserRules.vb" />
+    <Compile Include="classes\tables\cls_tblVendor.vb" />
+    <Compile Include="classes\tables\cls_tblNotes.vb" />
+    <Compile Include="classes\update\clsDBUpdate.vb" />
+    <Compile Include="classes\update\mdlUpdater.vb" />
+    <Compile Include="classes\modules\mdlLocalSettings.vb" />
+    <Compile Include="classes\msexcel\clsExportDatagridview.vb" />
+    <Compile Include="classes\msword\clsPrintBOL_WINWORD.vb" />
+    <Compile Include="classes\msexcel\clsPrintCaseTotal_MSEXCEL.vb" />
+    <Compile Include="classes\msword\clsPrintSaleOrder_WINWORD.vb" />
+    <Compile Include="classes\modules\mdlDbGlodals.vb" />
+    <Compile Include="classes\modules\mdlGlobals.vb" />
+    <Compile Include="classes\modules\mdlUsers.vb" />
+    <Compile Include="classes\others\clsConnection.vb" />
+    <Compile Include="classes\others\clsEncryption.vb" />
+    <Compile Include="classes\msexcel\clsPrintRoute_MSEXCEL.vb" />
+    <Compile Include="classes\some Print Objects\clsPrintLabel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="controls\MyDG.Designer.vb">
+      <DependentUpon>MyDG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="controls\MyDG.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dbWengLeeDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbWengLeeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="forms\BOL\frmBolAddressEdit.Designer.vb">
+      <DependentUpon>frmBolAddressEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\BOL\frmBolAddressEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\BOL\frmBolAddressAdd.Designer.vb">
+      <DependentUpon>frmBolAddressAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\BOL\frmBolAddressAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\BOL\frmBOLAddresses.Designer.vb">
+      <DependentUpon>frmBOLAddresses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\BOL\frmBOLAddresses.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\calender\frmCalender2.Designer.vb">
+      <DependentUpon>frmCalender2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\calender\frmCalender2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\calender\frmCalNotes.Designer.vb">
+      <DependentUpon>frmCalNotes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\calender\frmCalNotes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\customer\frmShowNotes.Designer.vb">
+      <DependentUpon>frmShowNotes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\customer\frmShowNotes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Email\frmEmailAddress.Designer.vb">
+      <DependentUpon>frmEmailAddress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Email\frmEmailAddress.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Email\frmSetupEmail.Designer.vb">
+      <DependentUpon>frmSetupEmail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Email\frmSetupEmail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\employee\employee\frmEmployee.Designer.vb">
+      <DependentUpon>frmEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\employee\employee\frmEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\employee\employee\frmImportEmployee.Designer.vb">
+      <DependentUpon>frmImportEmployee.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\employee\employee\frmImportEmployee.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\invoices\frmInvoices.Designer.vb">
+      <DependentUpon>frmInvoices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\invoices\frmInvoices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\order\frmPickReport.Designer.vb">
+      <DependentUpon>frmPickReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\order\frmPickReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\route\frmRouteReport.Designer.vb">
+      <DependentUpon>frmRouteReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\route\frmRouteReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\route\frmPreviewRoutePrint.Designer.vb">
+      <DependentUpon>frmPreviewRoutePrint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\route\frmPreviewRoutePrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\route\frmStopageReport.Designer.vb">
+      <DependentUpon>frmStopageReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\route\frmStopageReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Tasks\frmTaskList.Designer.vb">
+      <DependentUpon>frmTaskList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Tasks\frmTaskList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\inventory\sub Cat\frmFZWeights.Designer.vb">
+      <DependentUpon>frmFZWeights.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\inventory\sub Cat\frmFZWeights.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\inventory\sub Cat\cntlSubCat2.Designer.vb">
+      <DependentUpon>cntlSubCat2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\inventory\sub Cat\cntlSubCat2.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\inventory\sub Cat\frmAddSubStock.Designer.vb">
+      <DependentUpon>frmAddSubStock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\inventory\sub Cat\frmAddSubStock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\inventory\frmAdjustStock.Designer.vb">
+      <DependentUpon>frmAdjustStock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\inventory\frmAdjustStock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\inventory\frmStockFutureOrders.Designer.vb">
+      <DependentUpon>frmStockFutureOrders.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\inventory\frmStockFutureOrders.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\inventory\frmPurchaserEdit.Designer.vb">
+      <DependentUpon>frmPurchaserEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\inventory\frmPurchaserEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\inventory\frmPurchaseView.Designer.vb">
+      <DependentUpon>frmPurchaseView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\inventory\frmPurchaseView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\inventory\frmPurchaserAdd.Designer.vb">
+      <DependentUpon>frmPurchaserAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\inventory\frmPurchaserAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\inventory\cntlPurchaseView.Designer.vb">
+      <DependentUpon>cntlPurchaseView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\inventory\cntlPurchaseView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\inventory\frmStockReport.Designer.vb">
+      <DependentUpon>frmStockReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\inventory\frmStockReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\inventory\frmStockHistory.Designer.vb">
+      <DependentUpon>frmStockHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\inventory\frmStockHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\invoices\cntlInvoiceView.Designer.vb">
+      <DependentUpon>cntlInvoiceView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\invoices\cntlInvoiceView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\invoices\frmInvoiceStatusDialog.Designer.vb">
+      <DependentUpon>frmInvoiceStatusDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\invoices\frmInvoiceStatusDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\print Label\frmCustomersLastOrder.Designer.vb">
+      <DependentUpon>frmCustomersLastOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\print Label\frmCustomersLastOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\order\frmOrdersSelectDialog.Designer.vb">
+      <DependentUpon>frmOrdersSelectDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\order\frmOrdersSelectDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\inventory\frmInventoryList.Designer.vb">
+      <DependentUpon>frmInventoryList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\inventory\frmInventoryList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\product\frmSubCategory.Designer.vb">
+      <DependentUpon>frmSubCategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\product\frmSubCategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\schedule\frmScheduleOrderEdit.Designer.vb">
+      <DependentUpon>frmScheduleOrderEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\schedule\frmScheduleOrderEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\schedule\frmOrderConfirmAdd.Designer.vb">
+      <DependentUpon>frmOrderConfirmAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\schedule\frmOrderConfirmAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\schedule\frmTodaysScheduledOrdersView.Designer.vb">
+      <DependentUpon>frmTodaysScheduledOrdersView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\schedule\frmTodaysScheduledOrdersView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\schedule\frmScheduledOrdersView.Designer.vb">
+      <DependentUpon>frmScheduledOrdersView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\schedule\frmScheduledOrdersView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\schedule\cntlScheduledOrderView.Designer.vb">
+      <DependentUpon>cntlScheduledOrderView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\schedule\cntlScheduledOrderView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\schedule\frmScheduleOrderAdd.Designer.vb">
+      <DependentUpon>frmScheduleOrderAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\schedule\frmScheduleOrderAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\print\frmPrintList2.Designer.vb">
+      <DependentUpon>frmPrintList2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\print\frmPrintList2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\inventory\frmPriceMargin.Designer.vb">
+      <DependentUpon>frmPriceMargin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\inventory\frmPriceMargin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\product\frmProductTarget.Designer.vb">
+      <DependentUpon>frmProductTarget.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\product\frmProductTarget.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Tasks\usrTaskView.Designer.vb">
+      <DependentUpon>usrTaskView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Tasks\usrTaskView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\template\cntltemplateView.Designer.vb">
+      <DependentUpon>cntltemplateView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\template\cntltemplateView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\template\frmEditTemplate.Designer.vb">
+      <DependentUpon>frmEditTemplate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\template\frmEditTemplate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\template\frmTemplateView.Designer.vb">
+      <DependentUpon>frmTemplateView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\template\frmTemplateView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\template\frmCreateTemplate.Designer.vb">
+      <DependentUpon>frmCreateTemplate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\template\frmCreateTemplate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\order\frmOrdersHistory.Designer.vb">
+      <DependentUpon>frmOrdersHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\order\frmOrdersHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\inventory\frmPriceHistory.Designer.vb">
+      <DependentUpon>frmPriceHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\inventory\frmPriceHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\inventory\frmPriceList.Designer.vb">
+      <DependentUpon>frmPriceList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\inventory\frmPriceList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\vendors\frmVendorAdd.Designer.vb">
+      <DependentUpon>frmVendorAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\vendors\frmVendorAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\vendors\frmVendorEdit.Designer.vb">
+      <DependentUpon>frmVendorEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\vendors\frmVendorEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\vendors\frmVendorView.Designer.vb">
+      <DependentUpon>frmVendorView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\vendors\frmVendorView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\customer\frmCustomerEdit.Designer.vb">
+      <DependentUpon>frmCustomerEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\customer\frmCustomerEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\BOL\frmBolAddress.Designer.vb">
+      <DependentUpon>frmBolAddress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\BOL\frmBolAddress.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\order\cntlOrderView.Designer.vb">
+      <DependentUpon>cntlOrderView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\order\cntlOrderView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\route\cntlRouteView.Designer.vb">
+      <DependentUpon>cntlRouteView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\route\cntlRouteView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="forms\order\frmOrderFullfillment.Designer.vb">
+      <DependentUpon>frmOrderFullfillment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\order\frmOrderFullfillment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\order\frmOrdersFulFillList.Designer.vb">
+      <DependentUpon>frmOrdersFulFillList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\order\frmOrdersFulFillList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\order\frmOrdersCancelList.Designer.vb">
+      <DependentUpon>frmOrdersCancelList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\order\frmOrdersCancelList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\order\frmOrderEdit.Designer.vb">
+      <DependentUpon>frmOrderEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\order\frmOrderEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\order\frmOrderItemAdd.Designer.vb">
+      <DependentUpon>frmOrderItemAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\order\frmOrderItemAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\customer\frmCustomersView.Designer.vb">
+      <DependentUpon>frmCustomersView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\customer\frmCustomersView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\customer\frmCustomerAdd.Designer.vb">
+      <DependentUpon>frmCustomerAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\customer\frmCustomerAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\main\frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\main\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\main\frmMainAndAlsoStartupForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\main\frmMainAndAlsoStartupForm.Designer.vb">
+      <DependentUpon>frmMainAndAlsoStartupForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\order\frmOrderAdd.Designer.vb">
+      <DependentUpon>frmOrderAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\order\frmOrderAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\order\frmOrdersView.Designer.vb">
+      <DependentUpon>frmOrdersView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\order\frmOrdersView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\print\frmPrintList.Designer.vb">
+      <DependentUpon>frmPrintList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\print\frmPrintList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\product\frmProductsAdd.Designer.vb">
+      <DependentUpon>frmProductsAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\product\frmProductsAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\product\frmProductsEdit.Designer.vb">
+      <DependentUpon>frmProductsEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\product\frmProductsEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\product\frmProductsView.Designer.vb">
+      <DependentUpon>frmProductsView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\product\frmProductsView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\reports\frmPickedQuantities.Designer.vb">
+      <DependentUpon>frmPickedQuantities.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\reports\frmPickedQuantities.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\route\frmCreateRoute.Designer.vb">
+      <DependentUpon>frmCreateRoute.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\route\frmCreateRoute.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\route\frmViewRoute.Designer.vb">
+      <DependentUpon>frmViewRoute.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\route\frmViewRoute.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\settings\frmConnectionSettings.Designer.vb">
+      <DependentUpon>frmConnectionSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\settings\frmConnectionSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\settings\frmFarmDetails.Designer.vb">
+      <DependentUpon>frmFarmDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\settings\frmFarmDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\settings\frmPreferences.Designer.vb">
+      <DependentUpon>frmPreferences.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\settings\frmPreferences.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\TRUCK\frmDriver.Designer.vb">
+      <DependentUpon>frmDriver.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\TRUCK\frmDriver.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\TRUCK\frmTruck.Designer.vb">
+      <DependentUpon>frmTruck.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\TRUCK\frmTruck.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Users\frmCreateUser.Designer.vb">
+      <DependentUpon>frmCreateUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Users\frmCreateUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Users\frmUser.Designer.vb">
+      <DependentUpon>frmUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Users\frmUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="classes\map\frmViewMap.resx">
+      <DependentUpon>frmViewMap.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\MyDG.resx">
+      <DependentUpon>MyDG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\BOL\frmBolAddressEdit.resx">
+      <DependentUpon>frmBolAddressEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\BOL\frmBolAddressAdd.resx">
+      <DependentUpon>frmBolAddressAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\BOL\frmBOLAddresses.resx">
+      <DependentUpon>frmBOLAddresses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\calender\frmCalender2.resx">
+      <DependentUpon>frmCalender2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\calender\frmCalNotes.resx">
+      <DependentUpon>frmCalNotes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\customer\frmShowNotes.resx">
+      <DependentUpon>frmShowNotes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Email\frmEmailAddress.resx">
+      <DependentUpon>frmEmailAddress.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Email\frmSetupEmail.resx">
+      <DependentUpon>frmSetupEmail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\employee\employee\frmEmployee.resx">
+      <DependentUpon>frmEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\employee\employee\frmImportEmployee.resx">
+      <DependentUpon>frmImportEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\invoices\frmInvoices.resx">
+      <DependentUpon>frmInvoices.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\order\frmPickReport.resx">
+      <DependentUpon>frmPickReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\order\PickReport.rdlc" />
+    <EmbeddedResource Include="forms\route\frmStopageReport.resx">
+      <DependentUpon>frmStopageReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\route\StopageReport.rdlc" />
+    <EmbeddedResource Include="forms\route\RouteReport.rdlc" />
+    <EmbeddedResource Include="forms\route\frmRouteReport.resx">
+      <DependentUpon>frmRouteReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\route\frmPreviewRoutePrint.resx">
+      <DependentUpon>frmPreviewRoutePrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Tasks\frmTaskList.resx">
+      <DependentUpon>frmTaskList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\inventory\sub Cat\frmFZWeights.resx">
+      <DependentUpon>frmFZWeights.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\inventory\sub Cat\cntlSubCat2.resx">
+      <DependentUpon>cntlSubCat2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\inventory\sub Cat\frmAddSubStock.resx">
+      <DependentUpon>frmAddSubStock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\inventory\frmAdjustStock.resx">
+      <DependentUpon>frmAdjustStock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\inventory\frmStockFutureOrders.resx">
+      <DependentUpon>frmStockFutureOrders.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\inventory\frmPurchaserEdit.resx">
+      <DependentUpon>frmPurchaserEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\inventory\frmPurchaseView.resx">
+      <DependentUpon>frmPurchaseView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\inventory\frmPurchaserAdd.resx">
+      <DependentUpon>frmPurchaserAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\inventory\cntlPurchaseView.resx">
+      <DependentUpon>cntlPurchaseView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\inventory\frmStockReport.resx">
+      <DependentUpon>frmStockReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\inventory\frmStockHistory.resx">
+      <DependentUpon>frmStockHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\invoices\cntlInvoiceView.resx">
+      <DependentUpon>cntlInvoiceView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\invoices\frmInvoiceStatusDialog.resx">
+      <DependentUpon>frmInvoiceStatusDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\print Label\frmCustomersLastOrder.resx">
+      <DependentUpon>frmCustomersLastOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\order\frmOrdersSelectDialog.resx">
+      <DependentUpon>frmOrdersSelectDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\inventory\frmInventoryList.resx">
+      <DependentUpon>frmInventoryList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\product\frmSubCategory.resx">
+      <DependentUpon>frmSubCategory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\schedule\frmScheduleOrderEdit.resx">
+      <DependentUpon>frmScheduleOrderEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\schedule\frmOrderConfirmAdd.resx">
+      <DependentUpon>frmOrderConfirmAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\schedule\frmTodaysScheduledOrdersView.resx">
+      <DependentUpon>frmTodaysScheduledOrdersView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\schedule\frmScheduledOrdersView.resx">
+      <DependentUpon>frmScheduledOrdersView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\schedule\cntlScheduledOrderView.resx">
+      <DependentUpon>cntlScheduledOrderView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\schedule\frmScheduleOrderAdd.resx">
+      <DependentUpon>frmScheduleOrderAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\print\frmPrintList2.resx">
+      <DependentUpon>frmPrintList2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\inventory\frmPriceMargin.resx">
+      <DependentUpon>frmPriceMargin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\product\frmProductTarget.resx">
+      <DependentUpon>frmProductTarget.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Tasks\usrTaskView.resx">
+      <DependentUpon>usrTaskView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\template\cntltemplateView.resx">
+      <DependentUpon>cntltemplateView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\template\frmEditTemplate.resx">
+      <DependentUpon>frmEditTemplate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\template\frmTemplateView.resx">
+      <DependentUpon>frmTemplateView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\template\frmCreateTemplate.resx">
+      <DependentUpon>frmCreateTemplate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\order\frmOrdersHistory.resx">
+      <DependentUpon>frmOrdersHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\inventory\frmPriceHistory.resx">
+      <DependentUpon>frmPriceHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\inventory\frmPriceList.resx">
+      <DependentUpon>frmPriceList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\vendors\frmVendorAdd.resx">
+      <DependentUpon>frmVendorAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\vendors\frmVendorEdit.resx">
+      <DependentUpon>frmVendorEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\vendors\frmVendorView.resx">
+      <DependentUpon>frmVendorView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\customer\frmCustomerEdit.resx">
+      <DependentUpon>frmCustomerEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\BOL\frmBolAddress.resx">
+      <DependentUpon>frmBolAddress.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\order\cntlOrderView.resx">
+      <DependentUpon>cntlOrderView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\route\cntlRouteView.resx">
+      <DependentUpon>cntlRouteView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\order\frmOrderFullfillment.resx">
+      <DependentUpon>frmOrderFullfillment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\order\frmOrdersFulFillList.resx">
+      <DependentUpon>frmOrdersFulFillList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\order\frmOrdersCancelList.resx">
+      <DependentUpon>frmOrdersCancelList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\order\frmOrderEdit.resx">
+      <DependentUpon>frmOrderEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\order\frmOrderItemAdd.resx">
+      <DependentUpon>frmOrderItemAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\customer\frmCustomerAdd.resx">
+      <DependentUpon>frmCustomerAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\customer\frmCustomersView.resx">
+      <DependentUpon>frmCustomersView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\main\frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\main\frmMainAndAlsoStartupForm.resx">
+      <DependentUpon>frmMainAndAlsoStartupForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\order\frmOrderAdd.resx">
+      <DependentUpon>frmOrderAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\order\frmOrdersView.resx">
+      <DependentUpon>frmOrdersView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\print\frmPrintList.resx">
+      <DependentUpon>frmPrintList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\product\frmProductsAdd.resx">
+      <DependentUpon>frmProductsAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\product\frmProductsEdit.resx">
+      <DependentUpon>frmProductsEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\product\frmProductsView.resx">
+      <DependentUpon>frmProductsView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\reports\frmPickedQuantities.resx">
+      <DependentUpon>frmPickedQuantities.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\route\frmCreateRoute.resx">
+      <DependentUpon>frmCreateRoute.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\route\frmViewRoute.resx">
+      <DependentUpon>frmViewRoute.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\settings\frmConnectionSettings.resx">
+      <DependentUpon>frmConnectionSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\settings\frmFarmDetails.resx">
+      <DependentUpon>frmFarmDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\settings\frmPreferences.resx">
+      <DependentUpon>frmPreferences.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\TRUCK\frmDriver.resx">
+      <DependentUpon>frmDriver.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\TRUCK\frmTruck.resx">
+      <DependentUpon>frmTruck.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Users\frmCreateUser.resx">
+      <DependentUpon>frmCreateUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Users\frmUser.resx">
+      <DependentUpon>frmUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbWengLeeDataSet.xsc">
+      <DependentUpon>dbWengLeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbWengLeeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbWengLeeDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbWengLeeDataSet.xss">
+      <DependentUpon>dbWengLeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\cls_demotablesclass.FieldName.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Resources\Sales_Order.docx" />
+    <None Include="WengLee Application_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="classes\joinQueries\" />
+    <Folder Include="classes\Surprises\" />
+    <Folder Include="forms\employee\checkin\" />
+    <Folder Include="forms\employee\reports\" />
+    <Folder Include="print\" />
+    <Folder Include="Resources\todo\" />
+    <Folder Include="updates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BOL.xlsx" />
+    <None Include="Resources\BOL_DOC.docx" />
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_enquiry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pop-out-120.png" />
+    <None Include="Resources\Version 16.sql" />
+    <None Include="Resources\Version 17.sql" />
+    <None Include="Resources\Version 18.sql" />
+    <None Include="Resources\Version 19.sql" />
+    <None Include="Resources\Version 15.sql" />
+    <None Include="Resources\Version 14.sql" />
+    <Content Include="Resources\Newtonsoft.Json.dll" />
+    <None Include="Resources\Version 13.sql" />
+    <None Include="Resources\Updater.exe" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

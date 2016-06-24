@@ -1,0 +1,416 @@
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\bin\WengleeApp2\WengLee.exe.config
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee Application.vbproj.ResolveComReference.cache
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\bin\WengleeApp2\WengLee.exe.manifest
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\bin\WengleeApp2\WengLee.application
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\bin\WengleeApp2\WengLee.exe
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\bin\WengleeApp2\WengLee.pdb
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\bin\WengleeApp2\WengLee.xml
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\bin\WengleeApp2\Newtonsoft.Json.dll
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\bin\WengleeApp2\WhatsAppApi.dll
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmViewMap.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.MyDG.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmBolAddressEdit.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmBolAddressAdd.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmBOLAddresses.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmCalender2.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmCalNotes.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmShowNotes.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmEmailAddress.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmSetupEmail.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmEmployee.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmImportEmployee.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmTaskList.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmFZWeights.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.cntlSubCat2.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmAddSubStock.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmAdjustStock.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmInvoices.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmStockFutureOrders.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmPurchaserEdit.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmPurchaseView.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmPurchaserAdd.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.cntlPurchaseView.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmStockReport.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmStockHistory.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.cntlInvoiceView.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmInvoiceStatusDialog.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmCustomersLastOrder.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrdersSelectDialog.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmInventoryList.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmSubCategory.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmScheduleOrderEdit.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrderConfirmAdd.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmTodaysScheduledOrdersView.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmScheduledOrdersView.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.cntlScheduledOrderView.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmScheduleOrderAdd.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmPrintList2.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmPriceMargin.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmProductTarget.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.usrTaskView.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.cntltemplateView.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmEditTemplate.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmTemplateView.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmCreateTemplate.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrdersHistory.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmPriceHistory.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmPriceList.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmVendorAdd.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmVendorEdit.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmVendorView.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmCustomerEdit.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmBolAddress.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.cntlOrderView.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.cntlRouteView.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrderFullfillment.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrdersFulFillList.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrdersCancelList.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrderEdit.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrderItemAdd.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmCustomerAdd.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmCustomersView.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmLogin.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmMainAndAlsoStartupForm.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrderAdd.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrdersView.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmPrintList.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmProductsAdd.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmProductsEdit.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmProductsView.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmPickedQuantities.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmCreateRoute.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmViewRoute.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmConnectionSettings.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmFarmDetails.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmPreferences.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmDriver.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmTruck.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmCreateUser.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmUser.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.Resources.resources
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee Application.vbproj.GenerateResource.Cache
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee.TrustInfo.xml
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee.exe.manifest
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee.application
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee.exe
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee.xml
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee.pdb
+E:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\bin\WengleeApp2\WengLee.exe.config
+E:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee Application.vbproj.ResolveComReference.cache
+E:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee.exe
+E:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee.xml
+E:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee.pdb
+E:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee Application.vbprojResolveAssemblyReference.cache
+D:\Paid Projects\Cindy Tang\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmPreviewRoutePrint.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\bin\WengleeApp2\WengLee.exe.config
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\bin\WengleeApp2\WengLee.exe.manifest
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\bin\WengleeApp2\WengLee.application
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\bin\WengleeApp2\WengLee.exe
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\bin\WengleeApp2\WengLee.pdb
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\bin\WengleeApp2\WengLee.xml
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\bin\WengleeApp2\Newtonsoft.Json.dll
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee Application.vbproj.ResolveComReference.cache
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmViewMap.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.MyDG.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmBolAddressEdit.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmBolAddressAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmBOLAddresses.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmCalender2.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmCalNotes.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmShowNotes.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmEmailAddress.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmSetupEmail.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmEmployee.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmImportEmployee.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmInvoices.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmStopageReport.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmRouteReport.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmPreviewRoutePrint.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmTaskList.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmFZWeights.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.cntlSubCat2.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmAddSubStock.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmAdjustStock.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmStockFutureOrders.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmPurchaserEdit.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmPurchaseView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmPurchaserAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.cntlPurchaseView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmStockReport.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmStockHistory.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.cntlInvoiceView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmInvoiceStatusDialog.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmCustomersLastOrder.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrdersSelectDialog.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmInventoryList.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmSubCategory.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmScheduleOrderEdit.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrderConfirmAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmTodaysScheduledOrdersView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmScheduledOrdersView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.cntlScheduledOrderView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmScheduleOrderAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmPrintList2.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmPriceMargin.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmProductTarget.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.usrTaskView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.cntltemplateView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmEditTemplate.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmTemplateView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmCreateTemplate.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrdersHistory.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmPriceHistory.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmPriceList.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmVendorAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmVendorEdit.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmVendorView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmCustomerEdit.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmBolAddress.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.cntlOrderView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.cntlRouteView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrderFullfillment.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrdersFulFillList.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrdersCancelList.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrderEdit.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrderItemAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmCustomerAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmCustomersView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmLogin.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmMainAndAlsoStartupForm.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrderAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrdersView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmPrintList.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmProductsAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmProductsEdit.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmProductsView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmPickedQuantities.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmCreateRoute.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmViewRoute.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmConnectionSettings.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmFarmDetails.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmPreferences.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmDriver.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmTruck.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmCreateUser.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmUser.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.Resources.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee Application.vbproj.GenerateResource.Cache
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee.exe.licenses
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\RdlCompile.cache
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\RdlCompile.compiled
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee.TrustInfo.xml
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee.exe.manifest
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee.application
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee.exe
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee.xml
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee.pdb
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee Application.vbprojResolveAssemblyReference.cache
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\obj\x86\Debug\WengLee_Application.frmPickReport.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\bin\WengleeApp2\WengLee.exe.config
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee Application.vbproj.ResolveComReference.cache
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee.exe
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee.xml
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee.pdb
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\bin\WengleeApp2\WengLee.exe.manifest
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\bin\WengleeApp2\WengLee.application
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\bin\WengleeApp2\WengLee.exe
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\bin\WengleeApp2\WengLee.pdb
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\bin\WengleeApp2\WengLee.xml
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\bin\WengleeApp2\Newtonsoft.Json.dll
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee Application.vbprojResolveAssemblyReference.cache
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmViewMap.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.MyDG.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmBolAddressEdit.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmBolAddressAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmBOLAddresses.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmCalender2.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmCalNotes.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmShowNotes.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmEmailAddress.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmSetupEmail.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmEmployee.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmImportEmployee.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmInvoices.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmPickReport.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmStopageReport.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmRouteReport.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmPreviewRoutePrint.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmTaskList.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmFZWeights.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.cntlSubCat2.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmAddSubStock.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmAdjustStock.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmStockFutureOrders.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmPurchaserEdit.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmPurchaseView.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmPurchaserAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.cntlPurchaseView.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmStockReport.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmStockHistory.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.cntlInvoiceView.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmInvoiceStatusDialog.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmCustomersLastOrder.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrdersSelectDialog.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmInventoryList.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmSubCategory.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmScheduleOrderEdit.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrderConfirmAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmTodaysScheduledOrdersView.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmScheduledOrdersView.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.cntlScheduledOrderView.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmScheduleOrderAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmPrintList2.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmPriceMargin.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmProductTarget.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.usrTaskView.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.cntltemplateView.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmEditTemplate.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmTemplateView.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmCreateTemplate.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrdersHistory.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmPriceHistory.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmPriceList.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmVendorAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmVendorEdit.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmVendorView.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmCustomerEdit.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmBolAddress.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.cntlOrderView.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.cntlRouteView.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrderFullfillment.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrdersFulFillList.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrdersCancelList.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrderEdit.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrderItemAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmCustomerAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmCustomersView.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmLogin.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmMainAndAlsoStartupForm.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrderAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrdersView.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmPrintList.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmProductsAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmProductsEdit.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmProductsView.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmPickedQuantities.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmCreateRoute.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmViewRoute.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmConnectionSettings.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmFarmDetails.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmPreferences.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmDriver.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmTruck.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmCreateUser.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.frmUser.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee_Application.Resources.resources
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee Application.vbproj.GenerateResource.Cache
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee.exe.licenses
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\RdlCompile.cache
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\RdlCompile.compiled
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee.TrustInfo.xml
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee.exe.manifest
+E:\Activities\4. Cindy Tang\Post Order App\code_WengLee Application_May_03, 2016\WengLee Application\obj\x86\Debug\WengLee.application
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\bin\WengleeApp2\WengLee.exe.config
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee Application.vbproj.ResolveComReference.cache
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee.exe
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee.xml
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee.pdb
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\bin\WengleeApp2\WengLee.exe.manifest
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\bin\WengleeApp2\WengLee.application
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\bin\WengleeApp2\WengLee.exe
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\bin\WengleeApp2\WengLee.pdb
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\bin\WengleeApp2\WengLee.xml
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\bin\WengleeApp2\Newtonsoft.Json.dll
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee Application.vbprojResolveAssemblyReference.cache
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmViewMap.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.MyDG.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmBolAddressEdit.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmBolAddressAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmBOLAddresses.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmCalender2.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmCalNotes.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmShowNotes.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmEmailAddress.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmSetupEmail.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmEmployee.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmImportEmployee.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmInvoices.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmPickReport.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmStopageReport.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmRouteReport.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmPreviewRoutePrint.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmTaskList.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmFZWeights.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.cntlSubCat2.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmAddSubStock.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmAdjustStock.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmStockFutureOrders.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmPurchaserEdit.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmPurchaseView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmPurchaserAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.cntlPurchaseView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmStockReport.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmStockHistory.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.cntlInvoiceView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmInvoiceStatusDialog.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmCustomersLastOrder.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrdersSelectDialog.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmInventoryList.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmSubCategory.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmScheduleOrderEdit.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrderConfirmAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmTodaysScheduledOrdersView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmScheduledOrdersView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.cntlScheduledOrderView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmScheduleOrderAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmPrintList2.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmPriceMargin.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmProductTarget.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.usrTaskView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.cntltemplateView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmEditTemplate.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmTemplateView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmCreateTemplate.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrdersHistory.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmPriceHistory.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmPriceList.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmVendorAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmVendorEdit.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmVendorView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmCustomerEdit.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmBolAddress.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.cntlOrderView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.cntlRouteView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrderFullfillment.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrdersFulFillList.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrdersCancelList.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrderEdit.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrderItemAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmCustomerAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmCustomersView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmLogin.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmMainAndAlsoStartupForm.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrderAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmOrdersView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmPrintList.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmProductsAdd.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmProductsEdit.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmProductsView.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmPickedQuantities.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmCreateRoute.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmViewRoute.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmConnectionSettings.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmFarmDetails.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmPreferences.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmDriver.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmTruck.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmCreateUser.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.frmUser.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee_Application.Resources.resources
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee Application.vbproj.GenerateResource.Cache
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee.exe.licenses
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\RdlCompile.cache
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\RdlCompile.compiled
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee.TrustInfo.xml
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee.exe.manifest
+E:\Activities\4. Cindy Tang\Post Order App\WengLee Application\WengLee Application\obj\x86\Debug\WengLee.application
