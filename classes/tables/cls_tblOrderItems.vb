@@ -184,7 +184,7 @@ WHERE 1=1
     
     
     SELECT b.ProductId,b.ProductName,b.Category ,sum (a.Fresh) as 'Fresh' ,sum (a.Frozen) as  'Frozen',sum (a.Fresh) + sum (a.Frozen) as [Total],b. UnitOfMeasure as [Unit],'' as [ ] 
-    ,convert(varchar,ISNULL(sum(-d.Fresh),0)) + ',' + convert(varchar,ISNULL(sum(-d.Frozen),0)) as [Future Orders]
+    ,convert(varchar,ISNULL(-d.Fresh,0)) + ',' + convert(varchar,ISNULL(-d.Frozen,0)) as [Future Orders]
   FROM tblStock a
   left outer join [tblProducts] b
     on a.ProductId = b.ProductId 
@@ -196,7 +196,7 @@ WHERE 1=1
 	    on d.ProductId=a.ProductId
         --where a.OrderId in (select OrderId from tblOrder where OrderDate between @d1 and @d2) #####
           where a.TransactionDate between @d1 and @d2 #####
-    group by b.ProductId,b.ProductName,b.Category ,b. UnitOfMeasure 
+    group by b.ProductId,b.ProductName,b.Category ,b. UnitOfMeasure, d.Fresh, d.Frozen  
                     ]]></tblOrderItems_Select>.Value
         End Get
 

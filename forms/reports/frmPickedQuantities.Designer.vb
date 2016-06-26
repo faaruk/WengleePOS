@@ -169,6 +169,7 @@ Partial Class frmPickedQuantities
         'ColumnsFutureOrders
         '
         Me.ColumnsFutureOrders.DataPropertyName = "Future Orders"
+        Me.ColumnsFutureOrders.Frozen = True
         Me.ColumnsFutureOrders.HeaderText = "Future Fresh/Frozen"
         Me.ColumnsFutureOrders.Name = "ColumnsFutureOrders"
         Me.ColumnsFutureOrders.Width = 143

@@ -259,13 +259,13 @@
             Dim frm As New Form
             frm.Size = New Size(1100, 600)
             frm.BackColor = Color.White
-            frm.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedSingle
+            frm.FormBorderStyle = Windows.Forms.FormBorderStyle.Sizable
             frm.StartPosition = FormStartPosition.CenterScreen
             Dim cnt As New cntlRouteView
             frm.Controls.Add(cnt)
             cnt.Dock = DockStyle.Fill
             frm.MinimizeBox = False
-            frm.MaximizeBox = False
+            frm.MaximizeBox = True
             frm.TopMost = False
             frm.ShowInTaskbar = True
             cnt.OpenRoute(DataGridView1.SelectedRows(0).Cells("RouteId").Value)
@@ -275,7 +275,7 @@
 
     Private Sub CntlRouteView1_Load(sender As System.Object, e As System.EventArgs) Handles CntlRouteView1.Load
 
-        
+
     End Sub
     Sub LinkOrder()
         Try
@@ -296,20 +296,27 @@
     End Sub
 
     Private Sub btnLoadNcr_Click(sender As System.Object, e As System.EventArgs) Handles btnLoadNcr.Click
-        ProgressBar1.Visible = True
-        RefreshTransfererDB()
-        ProgressBar1.Step = 1
-        ProgressBar1.Value = 0
-        ProgressBar1.Maximum = 1000
-        ProgressBar1.Value = 0
-        For tmpRun As Integer = 0 To 1000 - 1
-            System.Threading.Thread.Sleep(1)
-            ProgressBar1.Value += 1
-        Next
-        LinkOrder()
-        If (DataGridView1.RowCount > 0) Then
-            ShowRouteMap(DataGridView1.SelectedRows(0).Cells("RouteId").Value)
-        End If
-        ProgressBar1.Visible = False
+        Try
+            ProgressBar1.Visible = True
+            RefreshTransfererDB()
+            ProgressBar1.Step = 1
+            ProgressBar1.Value = 0
+            ProgressBar1.Maximum = 1000
+            ProgressBar1.Value = 0
+            For tmpRun As Integer = 0 To 1000 - 1
+                System.Threading.Thread.Sleep(1)
+                ProgressBar1.Value += 1
+            Next
+            LinkOrder()
+
+            Try
+                CntlRouteView1.OpenRoute(DataGridView1.SelectedRows(0).Cells("RouteId").Value)
+            Catch ex As Exception
+                CntlRouteView1.Clear()
+            End Try
+
+            ProgressBar1.Visible = False
+        Catch ex As Exception
+        End Try
     End Sub
 End Class

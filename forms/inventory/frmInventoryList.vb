@@ -174,8 +174,8 @@
 
     Private Sub frmPriceList_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         ComboBox1.SelectedIndex = 1
-        LoadItems()
         LoadCategory()
+        LoadItems()
     End Sub
     Sub LoadCategory()
         Dim tmp As String = ""

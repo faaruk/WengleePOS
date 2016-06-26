@@ -182,9 +182,9 @@
             Exit Sub
         End If
         Dim strAssignTo As String
-
-        strAssignTo = cmbAssignTo.SelectedValue.ToString()
-
+        If (cmbAssignTo.SelectedValue <> Nothing) Then
+            strAssignTo = cmbAssignTo.SelectedValue.ToString()
+        End If
 
         If btnOk.Text = "Update" Then
             objTasks.Update(Updatefl.CreatedDate_, dtpTaskDate.Value, txtTask.Text, txtSubject.Text, txtDetails.Text, Updatefl.Createdby_, UserId, Now, cmbStatus.Text, Updatefl.TaskId_, strAssignTo)
