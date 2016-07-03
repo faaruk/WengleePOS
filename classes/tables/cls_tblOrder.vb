@@ -978,7 +978,8 @@ WHERE a.OrderId in ( select MAX(OrderId) from tblOrder where CreatedDate in (sel
 
         Return dt
     End Function
-    Function SelectOrdersAfterRoute(ByVal RouteId As String, Optional ByVal _conn As SqlConnection = Nothing, Optional ByVal _transac As SqlTransaction = Nothing) As DataTable
+    Function SelectOrdersAfterRoute(ByVal _RouteId As String, ByVal _additionalCondition As String,
+                                    Optional ByVal _conn As SqlConnection = Nothing, Optional ByVal _transac As SqlTransaction = Nothing) As DataTable
 
         Dim isDisposableItem As Boolean = False
         Dim objConn As clsConnection = Nothing
@@ -989,13 +990,14 @@ WHERE a.OrderId in ( select MAX(OrderId) from tblOrder where CreatedDate in (sel
         End If
         Dim strSQL As String
 
-        strSQL = "SELECT        OrderNo, C.CustomerName, O.OrderDate, O.CreatedDate, O.Status, "
+        strSQL = "SELECT        OrderNo, C.CustomerName, O.OrderDate, O.CreatedDate, O.Status, R.RouteDate, "
         strSQL += "R.RouteId, R.CreatedOn, R.OtherInfos, R.Driver "
         strSQL += "FROM            tblOrder O "
         strSQL += "inner join tblRouteOrders RO on O.OrderId=RO.OrderId "
         strSQL += "inner join tblRoute R on RO.RouteID=R.RouteId "
         strSQL += "inner join tblCustomer C on C.CustomerID=O.CutomerId  "
-        strSQL += "where(O.CreatedDate > R.CreatedOn) "
+        strSQL += "where (O.CreatedDate > R.CreatedOn) "
+        strSQL += _additionalCondition
         Dim comSelect As New SqlCommand(strSQL, _conn)
         If Not _transac Is Nothing Then
             comSelect.Transaction = _transac
@@ -1017,7 +1019,7 @@ WHERE a.OrderId in ( select MAX(OrderId) from tblOrder where CreatedDate in (sel
                 _conn.Dispose()
                 isDisposableItem = False
             End If
-            Throw ex
+            'Throw ex
         End Try
 
         comSelect.Dispose()
@@ -1176,7 +1178,7 @@ WHERE a.OrderId in ( select MAX(OrderId) from tblOrder where CreatedDate in (sel
             isDisposableItem = True
         End If
         Dim strSQL As String
-        
+
         strSQL = tblOrder_Select_Review + " and (h.OrderId = " + OrderId + " ) "
 
         Dim comSelect As New SqlCommand(strSQL, _conn)
