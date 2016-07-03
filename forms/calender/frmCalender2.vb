@@ -51,11 +51,21 @@
                 Case 2 'NO
                     SelectString = " AND f.ItemSl IS NULL"
             End Select
-            If chkFrozen.Checked Then
-                SelectString1 = " AND a.Frozen > 0"
-                SelectString2 = " AND a.OrderId in (select orderid from (SELECT  sum (Frozen) as  'Frozen' , orderid  FROM [tblOrderItems] group by orderid) a where  a.Frozen>0)"
-                SelectString3 = " AND a.OrderId in (select orderid from (SELECT  sum (Frozen) as  'Frozen' , orderid  FROM [tblOrderScheduleItems] group by orderid) a where  a.Frozen>0)"
+            If chkZeroQty.Checked = False Then
+                If chkFrozen.Checked Then
+                    SelectString1 = " AND a.Frozen > 0"
+                    SelectString2 = " AND a.OrderId in (select orderid from (SELECT  sum (Frozen) as  'Frozen' , orderid  FROM [tblOrderItems] group by orderid) a where  a.Frozen>0)"
+                    SelectString3 = " AND a.OrderId in (select orderid from (SELECT  sum (Frozen) as  'Frozen' , orderid  FROM [tblOrderScheduleItems] group by orderid) a where  a.Frozen>0)"
+                End If
+            Else
+                If chkFrozen.Checked Then
+                    'SelectString1 = " AND a.Frozen > 0"
+                    'SelectString2 = " AND a.OrderId in (select orderid from (SELECT  sum (Frozen) as  'Frozen' , orderid  FROM [tblOrderItems] group by orderid) a where  a.Frozen>0)"
+                    'SelectString3 = " AND a.OrderId in (select orderid from (SELECT  sum (Frozen) as  'Frozen' , orderid  FROM [tblOrderScheduleItems] group by orderid) a where  a.Frozen>0)"
+                End If
             End If
+
+            
 
             Try
                 Dim pp2 As New List(Of SqlParameter)

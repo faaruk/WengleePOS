@@ -24,6 +24,8 @@ Partial Class frmPickedQuantities
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.ColumnsFutureOrders = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.btnPrint = New System.Windows.Forms.Button()
         Me.lblTotalOrder = New System.Windows.Forms.Label()
@@ -33,8 +35,6 @@ Partial Class frmPickedQuantities
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cmbProductCategory = New System.Windows.Forms.ComboBox()
-        Me.Column1 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.ColumnsFutureOrders = New System.Windows.Forms.DataGridViewButtonColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -67,6 +67,23 @@ Partial Class frmPickedQuantities
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(902, 453)
         Me.DataGridView1.TabIndex = 2
+        '
+        'Column1
+        '
+        Me.Column1.Frozen = True
+        Me.Column1.HeaderText = "Inventory History"
+        Me.Column1.Name = "Column1"
+        Me.Column1.Text = "Inventory History"
+        Me.Column1.UseColumnTextForButtonValue = True
+        Me.Column1.Width = 120
+        '
+        'ColumnsFutureOrders
+        '
+        Me.ColumnsFutureOrders.DataPropertyName = "Future Orders"
+        Me.ColumnsFutureOrders.Frozen = True
+        Me.ColumnsFutureOrders.HeaderText = "Future Fresh/Frozen"
+        Me.ColumnsFutureOrders.Name = "ColumnsFutureOrders"
+        Me.ColumnsFutureOrders.Width = 143
         '
         'DateTimePicker1
         '
@@ -156,23 +173,6 @@ Partial Class frmPickedQuantities
         Me.cmbProductCategory.Name = "cmbProductCategory"
         Me.cmbProductCategory.Size = New System.Drawing.Size(231, 32)
         Me.cmbProductCategory.TabIndex = 27
-        '
-        'Column1
-        '
-        Me.Column1.Frozen = True
-        Me.Column1.HeaderText = "Inventory History"
-        Me.Column1.Name = "Column1"
-        Me.Column1.Text = "Inventory History"
-        Me.Column1.UseColumnTextForButtonValue = True
-        Me.Column1.Width = 120
-        '
-        'ColumnsFutureOrders
-        '
-        Me.ColumnsFutureOrders.DataPropertyName = "Future Orders"
-        Me.ColumnsFutureOrders.Frozen = True
-        Me.ColumnsFutureOrders.HeaderText = "Future Fresh/Frozen"
-        Me.ColumnsFutureOrders.Name = "ColumnsFutureOrders"
-        Me.ColumnsFutureOrders.Width = 143
         '
         'frmPickedQuantities
         '

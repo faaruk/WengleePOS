@@ -42,10 +42,22 @@ Partial Class frmMainAndAlsoStartupForm
         Me.LatestOrderCustomerWiseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OrderDetailByCustomerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CaseTotalsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OrdersAfterRouteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PayrollToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmployeeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ImportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ShortcutMenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenWindowAsChildWindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FarmDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PreferencesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UserDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AutomaticaUpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BOLSaveLocationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DBidyutuserfolderDesktopToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MastersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CustomerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VendorsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -61,17 +73,6 @@ Partial Class frmMainAndAlsoStartupForm
         Me.MapTestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AccountsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PaymentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ShortcutMenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OpenWindowAsChildWindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FarmDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PreferencesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UserDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AutomaticaUpdateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BOLSaveLocationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DBidyutuserfolderDesktopToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FullScreenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToWindowsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Splitter1 = New System.Windows.Forms.Splitter()
@@ -116,7 +117,7 @@ Partial Class frmMainAndAlsoStartupForm
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TransactionToolStripMenuItem, Me.ReportsToolStripMenuItem, Me.PayrollToolStripMenuItem, Me.MastersToolStripMenuItem, Me.AccountsToolStripMenuItem, Me.OptionsToolStripMenuItem, Me.FullScreenToolStripMenuItem, Me.ExitToWindowsToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TransactionToolStripMenuItem, Me.ReportsToolStripMenuItem, Me.PayrollToolStripMenuItem, Me.OptionsToolStripMenuItem, Me.MastersToolStripMenuItem, Me.AccountsToolStripMenuItem, Me.FullScreenToolStripMenuItem, Me.ExitToWindowsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1362, 24)
@@ -209,7 +210,7 @@ Partial Class frmMainAndAlsoStartupForm
         '
         'ReportsToolStripMenuItem
         '
-        Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LatestOrderCustomerWiseToolStripMenuItem, Me.OrderDetailByCustomerToolStripMenuItem, Me.CaseTotalsToolStripMenuItem})
+        Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LatestOrderCustomerWiseToolStripMenuItem, Me.OrderDetailByCustomerToolStripMenuItem, Me.CaseTotalsToolStripMenuItem, Me.OrdersAfterRouteToolStripMenuItem})
         Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
         Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
         Me.ReportsToolStripMenuItem.Text = "Reports"
@@ -232,6 +233,12 @@ Partial Class frmMainAndAlsoStartupForm
         Me.CaseTotalsToolStripMenuItem.Name = "CaseTotalsToolStripMenuItem"
         Me.CaseTotalsToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
         Me.CaseTotalsToolStripMenuItem.Text = "Case Totals"
+        '
+        'OrdersAfterRouteToolStripMenuItem
+        '
+        Me.OrdersAfterRouteToolStripMenuItem.Name = "OrdersAfterRouteToolStripMenuItem"
+        Me.OrdersAfterRouteToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.OrdersAfterRouteToolStripMenuItem.Text = "Late Orders"
         '
         'PayrollToolStripMenuItem
         '
@@ -259,6 +266,86 @@ Partial Class frmMainAndAlsoStartupForm
         Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
         Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
         Me.ReportToolStripMenuItem.Text = "Report"
+        '
+        'OptionsToolStripMenuItem
+        '
+        Me.OptionsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ShortcutMenuToolStripMenuItem, Me.OpenWindowAsChildWindowToolStripMenuItem, Me.LogoutToolStripMenuItem, Me.FarmDetailsToolStripMenuItem, Me.PreferencesToolStripMenuItem, Me.UserDetailsToolStripMenuItem, Me.AutomaticaUpdateToolStripMenuItem, Me.CheckForUpdatesToolStripMenuItem, Me.BOLSaveLocationToolStripMenuItem})
+        Me.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
+        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
+        Me.OptionsToolStripMenuItem.Text = "Options"
+        '
+        'ShortcutMenuToolStripMenuItem
+        '
+        Me.ShortcutMenuToolStripMenuItem.Checked = True
+        Me.ShortcutMenuToolStripMenuItem.CheckOnClick = True
+        Me.ShortcutMenuToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.ShortcutMenuToolStripMenuItem.Name = "ShortcutMenuToolStripMenuItem"
+        Me.ShortcutMenuToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
+        Me.ShortcutMenuToolStripMenuItem.Text = "Shortcut Menu"
+        '
+        'OpenWindowAsChildWindowToolStripMenuItem
+        '
+        Me.OpenWindowAsChildWindowToolStripMenuItem.Checked = True
+        Me.OpenWindowAsChildWindowToolStripMenuItem.CheckOnClick = True
+        Me.OpenWindowAsChildWindowToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.OpenWindowAsChildWindowToolStripMenuItem.Name = "OpenWindowAsChildWindowToolStripMenuItem"
+        Me.OpenWindowAsChildWindowToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
+        Me.OpenWindowAsChildWindowToolStripMenuItem.Text = "Open Window as Child Window"
+        '
+        'LogoutToolStripMenuItem
+        '
+        Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
+        Me.LogoutToolStripMenuItem.Text = "Logout"
+        '
+        'FarmDetailsToolStripMenuItem
+        '
+        Me.FarmDetailsToolStripMenuItem.Name = "FarmDetailsToolStripMenuItem"
+        Me.FarmDetailsToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
+        Me.FarmDetailsToolStripMenuItem.Text = "Farm Details"
+        '
+        'PreferencesToolStripMenuItem
+        '
+        Me.PreferencesToolStripMenuItem.Name = "PreferencesToolStripMenuItem"
+        Me.PreferencesToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
+        Me.PreferencesToolStripMenuItem.Text = "Preferences"
+        Me.PreferencesToolStripMenuItem.Visible = False
+        '
+        'UserDetailsToolStripMenuItem
+        '
+        Me.UserDetailsToolStripMenuItem.Name = "UserDetailsToolStripMenuItem"
+        Me.UserDetailsToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
+        Me.UserDetailsToolStripMenuItem.Text = "User Details"
+        '
+        'AutomaticaUpdateToolStripMenuItem
+        '
+        Me.AutomaticaUpdateToolStripMenuItem.Checked = True
+        Me.AutomaticaUpdateToolStripMenuItem.CheckOnClick = True
+        Me.AutomaticaUpdateToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.AutomaticaUpdateToolStripMenuItem.Name = "AutomaticaUpdateToolStripMenuItem"
+        Me.AutomaticaUpdateToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
+        Me.AutomaticaUpdateToolStripMenuItem.Text = "Automatic Update"
+        Me.AutomaticaUpdateToolStripMenuItem.Visible = False
+        '
+        'CheckForUpdatesToolStripMenuItem
+        '
+        Me.CheckForUpdatesToolStripMenuItem.Name = "CheckForUpdatesToolStripMenuItem"
+        Me.CheckForUpdatesToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
+        Me.CheckForUpdatesToolStripMenuItem.Text = "Check for updates"
+        Me.CheckForUpdatesToolStripMenuItem.Visible = False
+        '
+        'BOLSaveLocationToolStripMenuItem
+        '
+        Me.BOLSaveLocationToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DBidyutuserfolderDesktopToolStripMenuItem})
+        Me.BOLSaveLocationToolStripMenuItem.Name = "BOLSaveLocationToolStripMenuItem"
+        Me.BOLSaveLocationToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
+        Me.BOLSaveLocationToolStripMenuItem.Text = "BOL Save Location"
+        '
+        'DBidyutuserfolderDesktopToolStripMenuItem
+        '
+        Me.DBidyutuserfolderDesktopToolStripMenuItem.Name = "DBidyutuserfolderDesktopToolStripMenuItem"
+        Me.DBidyutuserfolderDesktopToolStripMenuItem.Size = New System.Drawing.Size(235, 22)
+        Me.DBidyutuserfolderDesktopToolStripMenuItem.Text = "D:\Bidyut_user_folder\Desktop"
         '
         'MastersToolStripMenuItem
         '
@@ -353,86 +440,6 @@ Partial Class frmMainAndAlsoStartupForm
         Me.PaymentToolStripMenuItem.Name = "PaymentToolStripMenuItem"
         Me.PaymentToolStripMenuItem.Size = New System.Drawing.Size(121, 22)
         Me.PaymentToolStripMenuItem.Text = "Payment"
-        '
-        'OptionsToolStripMenuItem
-        '
-        Me.OptionsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ShortcutMenuToolStripMenuItem, Me.OpenWindowAsChildWindowToolStripMenuItem, Me.LogoutToolStripMenuItem, Me.FarmDetailsToolStripMenuItem, Me.PreferencesToolStripMenuItem, Me.UserDetailsToolStripMenuItem, Me.AutomaticaUpdateToolStripMenuItem, Me.CheckForUpdatesToolStripMenuItem, Me.BOLSaveLocationToolStripMenuItem})
-        Me.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
-        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
-        Me.OptionsToolStripMenuItem.Text = "Options"
-        '
-        'ShortcutMenuToolStripMenuItem
-        '
-        Me.ShortcutMenuToolStripMenuItem.Checked = True
-        Me.ShortcutMenuToolStripMenuItem.CheckOnClick = True
-        Me.ShortcutMenuToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.ShortcutMenuToolStripMenuItem.Name = "ShortcutMenuToolStripMenuItem"
-        Me.ShortcutMenuToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
-        Me.ShortcutMenuToolStripMenuItem.Text = "Shortcut Menu"
-        '
-        'OpenWindowAsChildWindowToolStripMenuItem
-        '
-        Me.OpenWindowAsChildWindowToolStripMenuItem.Checked = True
-        Me.OpenWindowAsChildWindowToolStripMenuItem.CheckOnClick = True
-        Me.OpenWindowAsChildWindowToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.OpenWindowAsChildWindowToolStripMenuItem.Name = "OpenWindowAsChildWindowToolStripMenuItem"
-        Me.OpenWindowAsChildWindowToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
-        Me.OpenWindowAsChildWindowToolStripMenuItem.Text = "Open Window as Child Window"
-        '
-        'LogoutToolStripMenuItem
-        '
-        Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
-        Me.LogoutToolStripMenuItem.Text = "Logout"
-        '
-        'FarmDetailsToolStripMenuItem
-        '
-        Me.FarmDetailsToolStripMenuItem.Name = "FarmDetailsToolStripMenuItem"
-        Me.FarmDetailsToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
-        Me.FarmDetailsToolStripMenuItem.Text = "Farm Details"
-        '
-        'PreferencesToolStripMenuItem
-        '
-        Me.PreferencesToolStripMenuItem.Name = "PreferencesToolStripMenuItem"
-        Me.PreferencesToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
-        Me.PreferencesToolStripMenuItem.Text = "Preferences"
-        Me.PreferencesToolStripMenuItem.Visible = False
-        '
-        'UserDetailsToolStripMenuItem
-        '
-        Me.UserDetailsToolStripMenuItem.Name = "UserDetailsToolStripMenuItem"
-        Me.UserDetailsToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
-        Me.UserDetailsToolStripMenuItem.Text = "User Details"
-        '
-        'AutomaticaUpdateToolStripMenuItem
-        '
-        Me.AutomaticaUpdateToolStripMenuItem.Checked = True
-        Me.AutomaticaUpdateToolStripMenuItem.CheckOnClick = True
-        Me.AutomaticaUpdateToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.AutomaticaUpdateToolStripMenuItem.Name = "AutomaticaUpdateToolStripMenuItem"
-        Me.AutomaticaUpdateToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
-        Me.AutomaticaUpdateToolStripMenuItem.Text = "Automatic Update"
-        Me.AutomaticaUpdateToolStripMenuItem.Visible = False
-        '
-        'CheckForUpdatesToolStripMenuItem
-        '
-        Me.CheckForUpdatesToolStripMenuItem.Name = "CheckForUpdatesToolStripMenuItem"
-        Me.CheckForUpdatesToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
-        Me.CheckForUpdatesToolStripMenuItem.Text = "Check for updates"
-        Me.CheckForUpdatesToolStripMenuItem.Visible = False
-        '
-        'BOLSaveLocationToolStripMenuItem
-        '
-        Me.BOLSaveLocationToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DBidyutuserfolderDesktopToolStripMenuItem})
-        Me.BOLSaveLocationToolStripMenuItem.Name = "BOLSaveLocationToolStripMenuItem"
-        Me.BOLSaveLocationToolStripMenuItem.Size = New System.Drawing.Size(242, 22)
-        Me.BOLSaveLocationToolStripMenuItem.Text = "BOL Save Location"
-        '
-        'DBidyutuserfolderDesktopToolStripMenuItem
-        '
-        Me.DBidyutuserfolderDesktopToolStripMenuItem.Name = "DBidyutuserfolderDesktopToolStripMenuItem"
-        Me.DBidyutuserfolderDesktopToolStripMenuItem.Size = New System.Drawing.Size(235, 22)
-        Me.DBidyutuserfolderDesktopToolStripMenuItem.Text = "D:\Bidyut_user_folder\Desktop"
         '
         'FullScreenToolStripMenuItem
         '
@@ -769,4 +776,5 @@ Partial Class frmMainAndAlsoStartupForm
     Friend WithEvents PostScheduleToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CalenderToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TasksToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OrdersAfterRouteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

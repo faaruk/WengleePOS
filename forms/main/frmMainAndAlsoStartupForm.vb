@@ -369,4 +369,8 @@
         frmTaskList.Activate()
         frmTaskList.Focus()
     End Sub
+
+    Private Sub OrdersAfterRouteToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles OrdersAfterRouteToolStripMenuItem.Click
+        frmOrdersafterRoute.ShowDialog()
+    End Sub
 End Class

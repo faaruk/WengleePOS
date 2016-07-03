@@ -518,3 +518,4 @@ E:\Activities\4. Cindy Tang\WengleePOSGit\obj\x86\Debug\RdlCompile.compiled
 E:\Activities\4. Cindy Tang\WengleePOSGit\obj\x86\Debug\WengLee.TrustInfo.xml
 E:\Activities\4. Cindy Tang\WengleePOSGit\obj\x86\Debug\WengLee.exe.manifest
 E:\Activities\4. Cindy Tang\WengleePOSGit\obj\x86\Debug\WengLee.application
+E:\Activities\4. Cindy Tang\WengleePOSGit\obj\x86\Debug\WengLee_Application.frmOrdersafterRoute.resources

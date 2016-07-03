@@ -317,6 +317,12 @@
     <Compile Include="forms\order\frmPickReport.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="forms\route\frmOrdersafterRoute.Designer.vb">
+      <DependentUpon>frmOrdersafterRoute.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\route\frmOrdersafterRoute.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\route\frmRouteReport.Designer.vb">
       <DependentUpon>frmRouteReport.vb</DependentUpon>
     </Compile>
@@ -798,9 +804,13 @@
       <DependentUpon>frmPickReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\order\PickReport.rdlc" />
+    <EmbeddedResource Include="forms\route\frmOrdersafterRoute.resx">
+      <DependentUpon>frmOrdersafterRoute.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\route\frmStopageReport.resx">
       <DependentUpon>frmStopageReport.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\route\OrdersCreatedAfterRoute.rdlc" />
     <EmbeddedResource Include="forms\route\StopageReport.rdlc" />
     <EmbeddedResource Include="forms\route\RouteReport.rdlc" />
     <EmbeddedResource Include="forms\route\frmRouteReport.resx">
@@ -1022,6 +1032,7 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="ClassDiagram1.cd" />
     <None Include="dbWengLeeDataSet.xsc">
       <DependentUpon>dbWengLeeDataSet.xsd</DependentUpon>
     </None>
