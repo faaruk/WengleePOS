@@ -996,7 +996,8 @@ WHERE a.OrderId in ( select MAX(OrderId) from tblOrder where CreatedDate in (sel
         strSQL += "inner join tblRouteOrders RO on O.OrderId=RO.OrderId "
         strSQL += "inner join tblRoute R on RO.RouteID=R.RouteId "
         strSQL += "inner join tblCustomer C on C.CustomerID=O.CutomerId  "
-        strSQL += "where (O.CreatedDate > R.CreatedOn) "
+        'strSQL += "where (O.CreatedDate > R.CreatedOn) "
+        strSQL += "where(O.DeliveryDate > R.CreatedOn) "
         strSQL += _additionalCondition
         Dim comSelect As New SqlCommand(strSQL, _conn)
         If Not _transac Is Nothing Then
