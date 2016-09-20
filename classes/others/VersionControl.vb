@@ -40,6 +40,10 @@ Public Class VersionControl
             If ((updateToVersion > ExisitingVersion) And (VersionNumber > ExisitingVersion)) Then
                 Version2006(updateToVersion)
             End If
+            updateToVersion = 2007
+            If ((updateToVersion > ExisitingVersion) And (VersionNumber > ExisitingVersion)) Then
+                Version2007(updateToVersion)
+            End If
         End If
     End Sub
     Private Sub Version2003(ByVal version As Integer)
@@ -128,6 +132,23 @@ Public Class VersionControl
 
         Dim strSQL As String = " "
         strSQL = "alter table tblTask add AssignTo int"
+
+        Try
+            Dim com As New SqlCommand(strSQL, con)
+            version = com.ExecuteScalar
+        Catch ex As Exception
+        End Try
+
+        objCon.Dispose()
+        UpdateVersion(version)
+    End Sub
+    Private Sub Version2007(ByVal version As Integer)
+        Dim objCon As New clsConnection
+        Dim con As SqlConnection = Nothing
+        con = objCon.connect()
+
+        Dim strSQL As String = " "
+        strSQL = "alter table tblProducts add FZStatus bit default 0; update tblProducts set FZStatus=0;"
 
         Try
             Dim com As New SqlCommand(strSQL, con)

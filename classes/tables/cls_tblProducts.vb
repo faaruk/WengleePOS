@@ -139,6 +139,7 @@ SELECT [ProductId]
       ,[CreatedBy]
       ,[UpdatedBy]
       ,[Enabled]
+      ,[FZStatus]
   FROM [tblProducts]
 
 WHERE 1=1

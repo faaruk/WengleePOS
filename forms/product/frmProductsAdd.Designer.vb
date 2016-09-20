@@ -39,6 +39,7 @@ Partial Class frmProductsAdd
         Me.txtCode = New System.Windows.Forms.TextBox()
         Me.chkActive = New System.Windows.Forms.CheckBox()
         Me.chkTrack = New System.Windows.Forms.CheckBox()
+        Me.chkFz = New System.Windows.Forms.CheckBox()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -191,11 +192,22 @@ Partial Class frmProductsAdd
         Me.chkTrack.Text = "Track Inventory"
         Me.chkTrack.UseVisualStyleBackColor = True
         '
+        'chkFz
+        '
+        Me.chkFz.AutoSize = True
+        Me.chkFz.Location = New System.Drawing.Point(388, 262)
+        Me.chkFz.Name = "chkFz"
+        Me.chkFz.Size = New System.Drawing.Size(48, 24)
+        Me.chkFz.TabIndex = 10
+        Me.chkFz.Text = "FZ"
+        Me.chkFz.UseVisualStyleBackColor = True
+        '
         'frmProductsAdd
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(467, 389)
+        Me.Controls.Add(Me.chkFz)
         Me.Controls.Add(Me.chkTrack)
         Me.Controls.Add(Me.chkActive)
         Me.Controls.Add(Me.Label6)
@@ -244,4 +256,5 @@ Partial Class frmProductsAdd
     Friend WithEvents txtCode As System.Windows.Forms.TextBox
     Friend WithEvents chkActive As System.Windows.Forms.CheckBox
     Friend WithEvents chkTrack As CheckBox
+    Friend WithEvents chkFz As System.Windows.Forms.CheckBox
 End Class

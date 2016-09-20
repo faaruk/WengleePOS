@@ -42,6 +42,8 @@
             DataGridView1.Columns("SubCategory").HeaderText = "Sub-Category"
             DataGridView1.Columns("ProductId").HeaderText = "Product Id"
             DataGridView1.Columns("UnitOfMeasure").HeaderText = "Unit Of Measure"
+            DataGridView1.Columns("FZStatus").HeaderText = "FZ"
+
             'DataGridView1.Columns("").HeaderText = ""
             'DataGridView1.Columns("").HeaderText = ""
             'DataGridView1.Columns("").HeaderText = ""

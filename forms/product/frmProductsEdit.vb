@@ -13,6 +13,7 @@
         txtCode.Text = pr.ProductCode_
         chkActive.Checked = pr.Enabled_
         chkTrack.Checked = pr.TrackInventory_
+        chkFz.Checked = pr.FZStatus_
     End Sub
 
     Private Sub btnAdd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnUpdate.Click
@@ -22,7 +23,7 @@
                 Exit Sub
             End If
 
-            objProduct.Update(txtCode.Text, txtName.Text, txtFullName.Text, pr.Brand_, txtCategory.Text, txtSubCategory.Text, pr.Price_, txtUnit.Text, pr.DateCreated_, Now, pr.CreatedBy_, UserId, chkActive.Checked, chkTrack.Checked, ProductID)
+            objProduct.Update(txtCode.Text, txtName.Text, txtFullName.Text, pr.Brand_, txtCategory.Text, txtSubCategory.Text, pr.Price_, txtUnit.Text, pr.DateCreated_, Now, pr.CreatedBy_, UserId, chkActive.Checked, chkTrack.Checked, chkFz.Checked, ProductID)
             DialogResult = Windows.Forms.DialogResult.OK
             Close()
         Catch ex As Exception

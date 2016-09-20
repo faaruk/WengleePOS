@@ -6,7 +6,7 @@
             MsgBox("Please enter a valid Product Name", MsgBoxStyle.Information, "Info")
             Exit Sub
         End If
-        objProduct.Insert(txtCode.Text, txtName.Text, txtFullName.Text, "WengLee", txtCategory.Text, txtSubCategory.Text, 0, txtUnit.Text, Now, Now, UserId, UserId, chkActive.Checked, chkTrack.Checked)
+        objProduct.Insert(txtCode.Text, txtName.Text, txtFullName.Text, "WengLee", txtCategory.Text, txtSubCategory.Text, 0, txtUnit.Text, Now, Now, UserId, UserId, chkActive.Checked, chkTrack.Checked, chkFz.Checked)
         DialogResult = Windows.Forms.DialogResult.OK
         Close()
     End Sub

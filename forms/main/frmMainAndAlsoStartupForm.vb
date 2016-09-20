@@ -373,4 +373,12 @@
     Private Sub OrdersAfterRouteToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles OrdersAfterRouteToolStripMenuItem.Click
         frmOrdersafterRoute.ShowDialog()
     End Sub
+
+    Private Sub btnFz_Click(sender As System.Object, e As System.EventArgs) Handles btnFz.Click
+        If Not objUserRules.CheckRule(cls_tblUserRules.Rules.Inventory, UserId) Then
+            MsgBox("You are not authorised to perform this task", MsgBoxStyle.Information, "info")
+            Exit Sub
+        End If
+        ShowChild(frmInventoryListFz)
+    End Sub
 End Class

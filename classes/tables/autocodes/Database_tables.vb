@@ -13141,6 +13141,7 @@ Public Class Database_Table_code_class_tblProducts
         Dim UpdatedBy_ As Int32
         Dim Enabled_ As Boolean
         Dim TrackInventory_ As Boolean
+        Dim FZStatus_ As Boolean
 
     End Structure
 
@@ -13163,7 +13164,7 @@ Public Class Database_Table_code_class_tblProducts
         [UpdatedBy]
         [Enabled]
         [TrackInventory]
-
+        [FZStatus]
     End Enum
 
 
@@ -13186,7 +13187,8 @@ Public Class Database_Table_code_class_tblProducts
       [CreatedBy],
       [UpdatedBy],
       [Enabled],
-      [TrackInventory]
+      [TrackInventory],
+      [FZStatus]
   )
   VALUES
   (
@@ -13204,7 +13206,8 @@ Public Class Database_Table_code_class_tblProducts
       @CreatedBy_,
       @UpdatedBy_,
       @Enabled_,
-      @TrackInventory_
+      @TrackInventory_,
+      @FZStatus_
   )
 ]]></tblProducts_insert>.Value
         End Get
@@ -13229,7 +13232,8 @@ Set
     [CreatedBy]=@CreatedBy_,
     [UpdatedBy]=@UpdatedBy_,
     [Enabled]=@Enabled_,
-    [TrackInventory]=@TrackInventory_
+    [TrackInventory]=@TrackInventory_,
+    [FZStatus]=@FZStatus_
  WHERE [ProductId]=@ProductId_
 ]]></tblProducts_update>.Value
         End Get
@@ -13254,7 +13258,8 @@ SELECT
       [CreatedBy],
       [UpdatedBy],
       [Enabled],
-      [TrackInventory]
+      [TrackInventory],
+      [FZStatus]
 FROM [tblProducts]
     WHERE 1=1
 ]]></tblProducts_select>.Value
@@ -13343,6 +13348,7 @@ SELECT MAX([ProductId]) FROM [tblProducts] WHERE 1=1
     ByVal UpdatedBy_ As Int32, _
     ByVal Enabled_ As Boolean, _
     ByVal TrackInventory_ As Boolean, _
+    ByVal FZStatus_ As Boolean, _
                     Optional ByVal _conn As SqlConnection = Nothing, Optional ByVal _transac As SqlTransaction = Nothing) As Object
 
         Dim isDisposableItem As Boolean = False
@@ -13376,6 +13382,8 @@ SELECT MAX([ProductId]) FROM [tblProducts] WHERE 1=1
             .AddWithValue("@UpdatedBy_", UpdatedBy_)
             .AddWithValue("@Enabled_", Enabled_)
             .AddWithValue("@TrackInventory_", TrackInventory_)
+            .AddWithValue("@FZStatus_", FZStatus_)
+
 
         End With
 
@@ -13420,6 +13428,7 @@ SELECT MAX([ProductId]) FROM [tblProducts] WHERE 1=1
     ByVal UpdatedBy_ As Int32, _
     ByVal Enabled_ As Boolean, _
     ByVal TrackInventory_ As Boolean, _
+    ByVal FZStatus_ As Boolean, _
     ByVal ProductId_ As Int32, _
                    Optional ByVal _conn As SqlConnection = Nothing, Optional ByVal _transac As SqlTransaction = Nothing) As Object
 
@@ -13451,6 +13460,7 @@ SELECT MAX([ProductId]) FROM [tblProducts] WHERE 1=1
             .AddWithValue("@UpdatedBy_", UpdatedBy_)
             .AddWithValue("@Enabled_", Enabled_)
             .AddWithValue("@TrackInventory_", TrackInventory_)
+            .AddWithValue("@FZStatus_", FZStatus_)
             .AddWithValue("@ProductId_", ProductId_)
 
         End With
@@ -13528,6 +13538,9 @@ SELECT MAX([ProductId]) FROM [tblProducts] WHERE 1=1
                 fn = "Enabled"
             Case FieldName.TrackInventory
                 fn = "TrackInventory"
+            Case FieldName.FZStatus
+                fn = "FZStatus"
+
         End Select
 
         Dim comUpdate As New SqlCommand("Update [tblProducts] Set [" & fn.ToString & "]=@" & _fieldName.ToString & " WHERE 1=1 " & IIf(_selectString <> "", IIf(_selectString.Trim.StartsWith("AND"), _selectString, " AND " & _selectString), ""), _conn)
@@ -13718,6 +13731,8 @@ SELECT MAX([ProductId]) FROM [tblProducts] WHERE 1=1
                 If Not dt.Rows(0).Item("UpdatedBy") Is DBNull.Value Then : .UpdatedBy_ = dt.Rows(0).Item("UpdatedBy") : End If
                 If Not dt.Rows(0).Item("Enabled") Is DBNull.Value Then : .Enabled_ = dt.Rows(0).Item("Enabled") : End If
                 If Not dt.Rows(0).Item("TrackInventory") Is DBNull.Value Then : .TrackInventory_ = dt.Rows(0).Item("TrackInventory") : End If
+                If Not dt.Rows(0).Item("FZStatus") Is DBNull.Value Then : .FZStatus_ = dt.Rows(0).Item("FZStatus") : End If
+
             End With
 
 
@@ -13792,6 +13807,8 @@ SELECT MAX([ProductId]) FROM [tblProducts] WHERE 1=1
                 If Not dt.Rows(0).Item("UpdatedBy") Is DBNull.Value Then : .UpdatedBy_ = dt.Rows(0).Item("UpdatedBy") : End If
                 If Not dt.Rows(0).Item("Enabled") Is DBNull.Value Then : .Enabled_ = dt.Rows(0).Item("Enabled") : End If
                 If Not dt.Rows(0).Item("TrackInventory") Is DBNull.Value Then : .TrackInventory_ = dt.Rows(0).Item("TrackInventory") : End If
+                If Not dt.Rows(0).Item("FZStatus") Is DBNull.Value Then : .FZStatus_ = dt.Rows(0).Item("FZStatus") : End If
+
             End With
 
 
@@ -13865,6 +13882,8 @@ SELECT MAX([ProductId]) FROM [tblProducts] WHERE 1=1
                 fn = "Enabled"
             Case FieldName.TrackInventory
                 fn = "TrackInventory"
+            Case FieldName.FZStatus
+                fn = "FZStatus"
         End Select
 
         Dim comSelectScalar As New SqlCommand("SELECT TOP 1 " & fn & "  from [tblProducts] WHERE 1=1 " & IIf(_selectString <> "", IIf(_selectString.Trim.StartsWith("AND"), _selectString, " AND " & _selectString), ""), _conn)
@@ -13947,6 +13966,8 @@ SELECT MAX([ProductId]) FROM [tblProducts] WHERE 1=1
                 fn = "Enabled"
             Case FieldName.TrackInventory
                 fn = "TrackInventory"
+            Case FieldName.FZStatus
+                fn = "FZStatus"
         End Select
 
         Dim comSelectDistinct As New SqlCommand("SELECT DISTINCT " & fn & "  from [tblProducts] WHERE 1=1 " & IIf(_selectString <> "", IIf(_selectString.Trim.StartsWith("AND"), _selectString, " AND " & _selectString), ""), _conn)

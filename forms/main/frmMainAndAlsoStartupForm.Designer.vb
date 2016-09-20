@@ -95,6 +95,7 @@ Partial Class frmMainAndAlsoStartupForm
         Me.btnExit = New System.Windows.Forms.Button()
         Me.tmrVersionChecker = New System.Windows.Forms.Timer(Me.components)
         Me.tmrStartUpdater = New System.Windows.Forms.Timer(Me.components)
+        Me.btnFz = New System.Windows.Forms.Button()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.pnlShortcut.SuspendLayout()
@@ -466,6 +467,7 @@ Partial Class frmMainAndAlsoStartupForm
         '
         'pnlShortcut
         '
+        Me.pnlShortcut.Controls.Add(Me.btnFz)
         Me.pnlShortcut.Controls.Add(Me.Button2)
         Me.pnlShortcut.Controls.Add(Me.Button1)
         Me.pnlShortcut.Controls.Add(Me.btnInventory)
@@ -492,7 +494,7 @@ Partial Class frmMainAndAlsoStartupForm
         '
         Me.Button2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(1006, 0)
+        Me.Button2.Location = New System.Drawing.Point(1091, 0)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(80, 48)
         Me.Button2.TabIndex = 14
@@ -504,7 +506,7 @@ Partial Class frmMainAndAlsoStartupForm
         Me.Button1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(1086, 0)
+        Me.Button1.Location = New System.Drawing.Point(1171, 0)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(92, 48)
         Me.Button1.TabIndex = 13
@@ -541,7 +543,7 @@ Partial Class frmMainAndAlsoStartupForm
         Me.btnCalender.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnCalender.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCalender.Location = New System.Drawing.Point(914, 0)
+        Me.btnCalender.Location = New System.Drawing.Point(999, 0)
         Me.btnCalender.Name = "btnCalender"
         Me.btnCalender.Size = New System.Drawing.Size(92, 48)
         Me.btnCalender.TabIndex = 12
@@ -553,7 +555,7 @@ Partial Class frmMainAndAlsoStartupForm
         Me.txtScheduledOrders.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.txtScheduledOrders.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtScheduledOrders.Location = New System.Drawing.Point(822, 0)
+        Me.txtScheduledOrders.Location = New System.Drawing.Point(907, 0)
         Me.txtScheduledOrders.Name = "txtScheduledOrders"
         Me.txtScheduledOrders.Size = New System.Drawing.Size(92, 48)
         Me.txtScheduledOrders.TabIndex = 11
@@ -575,7 +577,7 @@ Partial Class frmMainAndAlsoStartupForm
         '
         Me.btnCancelOrder.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnCancelOrder.Location = New System.Drawing.Point(1178, 0)
+        Me.btnCancelOrder.Location = New System.Drawing.Point(1263, 0)
         Me.btnCancelOrder.Name = "btnCancelOrder"
         Me.btnCancelOrder.Size = New System.Drawing.Size(80, 48)
         Me.btnCancelOrder.TabIndex = 2
@@ -680,6 +682,18 @@ Partial Class frmMainAndAlsoStartupForm
         '
         Me.tmrStartUpdater.Interval = 120000
         '
+        'btnFz
+        '
+        Me.btnFz.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnFz.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFz.Location = New System.Drawing.Point(822, 0)
+        Me.btnFz.Name = "btnFz"
+        Me.btnFz.Size = New System.Drawing.Size(85, 48)
+        Me.btnFz.TabIndex = 15
+        Me.btnFz.Text = "FZ Inventory"
+        Me.btnFz.UseVisualStyleBackColor = True
+        '
         'frmMainAndAlsoStartupForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -777,4 +791,5 @@ Partial Class frmMainAndAlsoStartupForm
     Friend WithEvents CalenderToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TasksToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OrdersAfterRouteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents btnFz As System.Windows.Forms.Button
 End Class

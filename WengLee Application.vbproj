@@ -305,6 +305,12 @@
     <Compile Include="forms\employee\employee\frmImportEmployee.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="forms\inventory\frmInventoryListFz.Designer.vb">
+      <DependentUpon>frmInventoryListFz.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\inventory\frmInventoryListFz.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\invoices\frmInvoices.Designer.vb">
       <DependentUpon>frmInvoices.vb</DependentUpon>
     </Compile>
@@ -796,6 +802,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\employee\employee\frmImportEmployee.resx">
       <DependentUpon>frmImportEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\inventory\frmInventoryListFz.resx">
+      <DependentUpon>frmInventoryListFz.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\invoices\frmInvoices.resx">
       <DependentUpon>frmInvoices.vb</DependentUpon>
