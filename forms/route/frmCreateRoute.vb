@@ -414,8 +414,10 @@
             Catch ex As Exception
             End Try
             conn = (New clsConnection).connect
+            Dim RouteDetails As cls_tblRoute.Fields
             Try
                 If EditRouteID <> 0 Then
+                    RouteDetails = objRoute.Selection_One_Row(EditRouteID)
                     objRouteItems.Delete_By_Select("[RouteID]=" & EditRouteID, Nothing)
                     objRoute.Delete_By_RouteId(EditRouteID)
                 End If
@@ -436,7 +438,13 @@
             transact = conn.BeginTransaction
 
             'Dim RouteId As Integer = objRoute.Insert(Now, UserId, Now, UserId, Now, SelectedRoute, dgRouteCities.Rows.Count, SelectedDate, Val(lblCaseTotal.Text), cmbTruck.Text, cmbDriver.Text, txtRouteName.Text, "", conn, transact)
-            Dim RouteId As Integer = objRoute.Insert(dtpFrom.Value, UserId, Now, UserId, Now, SelectedRoute, dgRouteCities.Rows.Count, SelectedDate, Val(lblCaseTotal.Text), cmbTruck.Text, cmbDriver.Text, txtRouteName.Text, "", conn, transact)
+            Dim RouteId As Integer
+            If EditRouteID <> 0 Then
+                RouteId = objRoute.Insert(dtpFrom.Value, UserId, RouteDetails.CreatedOn, UserId, RouteDetails.CreatedOn, SelectedRoute, dgRouteCities.Rows.Count, SelectedDate, Val(lblCaseTotal.Text), cmbTruck.Text, cmbDriver.Text, txtRouteName.Text, "", conn, transact)
+            Else
+                RouteId = objRoute.Insert(dtpFrom.Value, UserId, Now, UserId, Now, SelectedRoute, dgRouteCities.Rows.Count, SelectedDate, Val(lblCaseTotal.Text), cmbTruck.Text, cmbDriver.Text, txtRouteName.Text, "", conn, transact)
+            End If
+
             For Each dr As DataGridViewRow In dgRouteCities.Rows
                 objRouteItems.Insert(dr.Index + 1, dr.Cells("OrderID").Value, RouteId, conn, transact)
             Next

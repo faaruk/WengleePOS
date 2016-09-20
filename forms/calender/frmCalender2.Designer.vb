@@ -22,19 +22,13 @@ Partial Class frmCalender2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.chkLargeOrders = New System.Windows.Forms.CheckBox()
+        Me.chkZeroQty = New System.Windows.Forms.CheckBox()
         Me.chkFrozen = New System.Windows.Forms.CheckBox()
         Me.chkFutureOrders = New System.Windows.Forms.CheckBox()
         Me.cmbBOL = New System.Windows.Forms.ComboBox()
@@ -45,7 +39,14 @@ Partial Class frmCalender2
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.CntlScheduledOrderView1 = New WengLee_Application.cntlScheduledOrderView()
         Me.CntlOrderView1 = New WengLee_Application.cntlOrderView()
-        Me.chkZeroQty = New System.Windows.Forms.CheckBox()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -61,14 +62,14 @@ Partial Class frmCalender2
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeight = 55
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
@@ -77,62 +78,17 @@ Partial Class frmCalender2
         Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersVisible = False
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.RowTemplate.Height = 40
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(630, 681)
+        Me.DataGridView1.Size = New System.Drawing.Size(787, 681)
         Me.DataGridView1.TabIndex = 0
-        '
-        'Column8
-        '
-        Me.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ButtonFace
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Column8.DefaultCellStyle = DataGridViewCellStyle5
-        Me.Column8.FillWeight = 30.0!
-        Me.Column8.HeaderText = " "
-        Me.Column8.Name = "Column8"
-        Me.Column8.Width = 39
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Day1"
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Day2"
-        Me.Column2.Name = "Column2"
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Day3"
-        Me.Column3.Name = "Column3"
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Day4"
-        Me.Column4.Name = "Column4"
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Day5"
-        Me.Column5.Name = "Column5"
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Day6"
-        Me.Column6.Name = "Column6"
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "Day7"
-        Me.Column7.Name = "Column7"
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.chkLargeOrders)
         Me.Panel1.Controls.Add(Me.chkZeroQty)
         Me.Panel1.Controls.Add(Me.chkFrozen)
         Me.Panel1.Controls.Add(Me.chkFutureOrders)
@@ -145,8 +101,30 @@ Partial Class frmCalender2
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(629, 733)
+        Me.Panel1.Size = New System.Drawing.Size(786, 733)
         Me.Panel1.TabIndex = 1
+        '
+        'chkLargeOrders
+        '
+        Me.chkLargeOrders.AutoSize = True
+        Me.chkLargeOrders.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkLargeOrders.Location = New System.Drawing.Point(545, 6)
+        Me.chkLargeOrders.Name = "chkLargeOrders"
+        Me.chkLargeOrders.Size = New System.Drawing.Size(124, 21)
+        Me.chkLargeOrders.TabIndex = 8
+        Me.chkLargeOrders.Text = "Large Orders"
+        Me.chkLargeOrders.UseVisualStyleBackColor = True
+        '
+        'chkZeroQty
+        '
+        Me.chkZeroQty.AutoSize = True
+        Me.chkZeroQty.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkZeroQty.Location = New System.Drawing.Point(506, 26)
+        Me.chkZeroQty.Name = "chkZeroQty"
+        Me.chkZeroQty.Size = New System.Drawing.Size(146, 21)
+        Me.chkZeroQty.TabIndex = 7
+        Me.chkZeroQty.Text = "Zero Qty Orders"
+        Me.chkZeroQty.UseVisualStyleBackColor = True
         '
         'chkFrozen
         '
@@ -189,7 +167,7 @@ Partial Class frmCalender2
         '
         Me.btnSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSearch.Location = New System.Drawing.Point(547, 16)
+        Me.btnSearch.Location = New System.Drawing.Point(704, 16)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(75, 29)
         Me.btnSearch.TabIndex = 3
@@ -231,7 +209,7 @@ Partial Class frmCalender2
         Me.Panel2.Controls.Add(Me.CntlScheduledOrderView1)
         Me.Panel2.Controls.Add(Me.CntlOrderView1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel2.Location = New System.Drawing.Point(629, 0)
+        Me.Panel2.Location = New System.Drawing.Point(786, 0)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(492, 733)
         Me.Panel2.TabIndex = 2
@@ -260,22 +238,57 @@ Partial Class frmCalender2
         Me.CntlOrderView1.Size = New System.Drawing.Size(492, 733)
         Me.CntlOrderView1.TabIndex = 0
         '
-        'chkZeroQty
+        'Column7
         '
-        Me.chkZeroQty.AutoSize = True
-        Me.chkZeroQty.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chkZeroQty.Location = New System.Drawing.Point(506, 26)
-        Me.chkZeroQty.Name = "chkZeroQty"
-        Me.chkZeroQty.Size = New System.Drawing.Size(146, 21)
-        Me.chkZeroQty.TabIndex = 7
-        Me.chkZeroQty.Text = "Zero Qty Orders"
-        Me.chkZeroQty.UseVisualStyleBackColor = True
+        Me.Column7.HeaderText = "Day7"
+        Me.Column7.Name = "Column7"
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Day6"
+        Me.Column6.Name = "Column6"
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Day5"
+        Me.Column5.Name = "Column5"
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Day4"
+        Me.Column4.Name = "Column4"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Day3"
+        Me.Column3.Name = "Column3"
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Day2"
+        Me.Column2.Name = "Column2"
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Day1"
+        Me.Column1.Name = "Column1"
+        '
+        'Column8
+        '
+        Me.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonFace
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Column8.DefaultCellStyle = DataGridViewCellStyle2
+        Me.Column8.FillWeight = 30.0!
+        Me.Column8.HeaderText = " "
+        Me.Column8.Name = "Column8"
+        Me.Column8.Width = 39
         '
         'frmCalender2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1121, 733)
+        Me.ClientSize = New System.Drawing.Size(1278, 733)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
         Me.Name = "frmCalender2"
@@ -296,6 +309,11 @@ Partial Class frmCalender2
     Friend WithEvents btnSearch As System.Windows.Forms.Button
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents cmbBOL As System.Windows.Forms.ComboBox
+    Friend WithEvents chkFutureOrders As System.Windows.Forms.CheckBox
+    Friend WithEvents CntlScheduledOrderView1 As WengLee_Application.cntlScheduledOrderView
+    Friend WithEvents chkFrozen As System.Windows.Forms.CheckBox
+    Friend WithEvents chkZeroQty As System.Windows.Forms.CheckBox
+    Friend WithEvents chkLargeOrders As System.Windows.Forms.CheckBox
     Friend WithEvents Column8 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -304,8 +322,4 @@ Partial Class frmCalender2
     Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column7 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents chkFutureOrders As System.Windows.Forms.CheckBox
-    Friend WithEvents CntlScheduledOrderView1 As WengLee_Application.cntlScheduledOrderView
-    Friend WithEvents chkFrozen As System.Windows.Forms.CheckBox
-    Friend WithEvents chkZeroQty As System.Windows.Forms.CheckBox
 End Class

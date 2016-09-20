@@ -34,6 +34,9 @@ Partial Class frmStockHistory
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.chkDateRange = New System.Windows.Forms.CheckBox()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.lblTotalFresh = New System.Windows.Forms.Label()
+        Me.lblTotalFrozen = New System.Windows.Forms.Label()
+        Me.lblTotal = New System.Windows.Forms.Label()
         CType(Me.dgHistory, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -149,7 +152,6 @@ Partial Class frmStockHistory
         Me.DateTimePicker2.Location = New System.Drawing.Point(430, 7)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(112, 23)
-
         Me.DateTimePicker2.TabIndex = 2
         '
         'DateTimePicker1
@@ -186,11 +188,47 @@ Partial Class frmStockHistory
         Me.Button2.Text = "Show"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'lblTotalFresh
+        '
+        Me.lblTotalFresh.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.lblTotalFresh.AutoSize = True
+        Me.lblTotalFresh.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalFresh.Location = New System.Drawing.Point(159, 699)
+        Me.lblTotalFresh.Name = "lblTotalFresh"
+        Me.lblTotalFresh.Size = New System.Drawing.Size(75, 13)
+        Me.lblTotalFresh.TabIndex = 6
+        Me.lblTotalFresh.Text = "Total Fresh:"
+        '
+        'lblTotalFrozen
+        '
+        Me.lblTotalFrozen.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.lblTotalFrozen.AutoSize = True
+        Me.lblTotalFrozen.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalFrozen.Location = New System.Drawing.Point(308, 699)
+        Me.lblTotalFrozen.Name = "lblTotalFrozen"
+        Me.lblTotalFrozen.Size = New System.Drawing.Size(82, 13)
+        Me.lblTotalFrozen.TabIndex = 7
+        Me.lblTotalFrozen.Text = "Total Frozen:"
+        '
+        'lblTotal
+        '
+        Me.lblTotal.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.lblTotal.AutoSize = True
+        Me.lblTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotal.Location = New System.Drawing.Point(528, 699)
+        Me.lblTotal.Name = "lblTotal"
+        Me.lblTotal.Size = New System.Drawing.Size(40, 13)
+        Me.lblTotal.TabIndex = 8
+        Me.lblTotal.Text = "Total:"
+        '
         'frmStockHistory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1090, 728)
+        Me.Controls.Add(Me.lblTotal)
+        Me.Controls.Add(Me.lblTotalFrozen)
+        Me.Controls.Add(Me.lblTotalFresh)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.dgHistory)
@@ -201,6 +239,7 @@ Partial Class frmStockHistory
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents dgHistory As System.Windows.Forms.DataGridView
@@ -215,4 +254,7 @@ Partial Class frmStockHistory
     Friend WithEvents chkFresh As System.Windows.Forms.CheckBox
     Friend WithEvents btnExport As System.Windows.Forms.Button
     Friend WithEvents Column1 As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents lblTotalFresh As System.Windows.Forms.Label
+    Friend WithEvents lblTotalFrozen As System.Windows.Forms.Label
+    Friend WithEvents lblTotal As System.Windows.Forms.Label
 End Class

@@ -33,10 +33,19 @@
          
         Catch ex As Exception
         End Try
-        
 
+        'DataGridView1.Columns.Clear()
+        'DataGridView1.Columns.RemoveAt(0)
+        'DataGridView1.Columns.RemoveAt(1)
+        'DataGridView1.Columns.RemoveAt(2)
+        'DataGridView1.Columns.RemoveAt(3)
+        'DataGridView1.Columns.RemoveAt(4)
+        'DataGridView1.Columns.RemoveAt(5)
+        'DataGridView1.Columns.RemoveAt(6)
         For i = 0 To 6
-
+            'If (i > 6) Then
+            'DataGridView1.Columns.Add("newColumnName", "Column Name in Text")
+            'End If
             Dim dte As Date = txtDate.Value.Date.AddDays(i)
             Dim dte2 As Date = dte.AddDays(1).AddSeconds(-1)
 
@@ -64,14 +73,21 @@
                     'SelectString3 = " AND a.OrderId in (select orderid from (SELECT  sum (Frozen) as  'Frozen' , orderid  FROM [tblOrderScheduleItems] group by orderid) a where  a.Frozen>0)"
                 End If
             End If
+            Dim SelectStringLargeOrders = ""
+            Dim SelectStringLargeOrders2 = ""
+            Dim SelectStringLargeOrders3 = ""
+            If chkLargeOrders.Checked = True Then
+                SelectStringLargeOrders = " having sum (a.Fresh) + sum (a.Frozen)>=20 "
+                SelectStringLargeOrders2 = " AND a.OrderId in (select orderid from (SELECT  sum (Frozen)+sum(Fresh) as  'Frozen' , orderid  FROM [tblOrderItems] group by orderid) B where  B.Frozen>=20) "
+                SelectStringLargeOrders3 = " and a.OrderId in (select orderid from (SELECT  sum (Frozen)+sum(Fresh) as  'Frozen' , orderid  FROM [tblOrderScheduleItems] group by orderid) B where  B.Frozen>=20) "
 
-            
+            End If
 
             Try
                 Dim pp2 As New List(Of SqlParameter)
                 pp2.Add(New SqlParameter("@d1", dte))
                 pp2.Add(New SqlParameter("@d2", dte2))
-                Dim dt2 As DataTable = ExecuteAdapter(cls_tblOrderItems.tblOrderItems_Select_PickedQuantities_total_for_Calender & SelectString & SelectString1 & " group by b. UnitOfMeasure ", pp2)
+                Dim dt2 As DataTable = ExecuteAdapter(cls_tblOrderItems.tblOrderItems_Select_PickedQuantities_total_for_Calender & SelectString & SelectString1 & " group by b. UnitOfMeasure " & SelectStringLargeOrders, pp2)
                 Dim Str As String = ""
                 For Each dr As DataRow In dt2.Rows
                     If dr("Unit").ToString.ToUpper.Contains("CASE") Then
@@ -82,6 +98,8 @@
                 DataGridView1.Rows(0).Cells(i + 1).Value = Str
             Catch ex As Exception
             End Try
+
+
 
             DataGridView1.Columns(i + 1).HeaderText = dte.ToString("MM-dd-yyyy") & vbNewLine & dte.DayOfWeek.ToString
             DataGridView1.Columns(i + 1).Tag = dte
@@ -101,7 +119,7 @@
             Dim lrc As Integer = 0
             Try
                 Dim pp As New List(Of SqlParameter)
-                SelectString += SelectString2 & " AND a.[" & cls_tblOrder.FieldName.OrderDate.ToString & "] Between @d1 and @d2 Order By CreatedDate,CustomerName"
+                SelectString += SelectString2 & SelectStringLargeOrders2 & " AND a.[" & cls_tblOrder.FieldName.OrderDate.ToString & "] Between @d1 and @d2 Order By CreatedDate,CustomerName"
                 pp.Add(New SqlParameter("@d1", dte))
                 pp.Add(New SqlParameter("@d2", dte2))
                 Dim dt As DataTable = Nothing
@@ -188,7 +206,7 @@
 
 
                     SelectTable = "RIGHT OUTER JOIN (" & SelectTable & ")  fff on (a.startdate = a.enddate or CONVERT(date,fff.dddddd) between a.startdate and a.enddate) and ((a.[ScheduleType]='DAILY' and (a.[Repeat] =1 or DATEDIFF(DAY,a.[StartDate] ,CONVERT(date,fff.dddddd)) % a.[Repeat] = 0)) or (a.[ScheduleType]='WEEKLY' and a.[ScheduleInfo] like '%' + (DATENAME(dw, fff.dddddd)) + '%') OR (a.[ScheduleType]='MONTHLY' and (a.[Repeat] =1 or DATEDIFF(Month,a.[StartDate] ,CONVERT(date,fff.dddddd)) % a.[Repeat] = 0) and DATEPART (day,a.[StartDate]) = DATEPART (day,fff.dddddd))) and a.OrderId not in (Select ScheduledOrderId from tblOrder where Convert(Date,OrderDate)=fff.dddddd)  "
-                    Dim dt As DataTable = objSchOrders.Selection(cls_tblOrderSchedule.SelectionType.ScheduledOrder, SelectTable & " Where a.OrderId is not null " & SelectString & SelectString3, pp)
+                    Dim dt As DataTable = objSchOrders.Selection(cls_tblOrderSchedule.SelectionType.ScheduledOrder, SelectTable & " Where a.OrderId is not null " & SelectString & SelectString3 & SelectStringLargeOrders3, pp)
                     For j = 0 To dt.Rows.Count - 1
                         Dim dr As DataRow = dt.Rows(j)
                         If DataGridView1.RowCount = lrc + j + FstRow Then

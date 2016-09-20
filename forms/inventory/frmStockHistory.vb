@@ -34,7 +34,8 @@
             If chkDateRange.Checked Then
                 strNew = "and a.TransactionDate Between @d1 and @d2"
                 paramList.Add(New SqlParameter("@d1", DateTimePicker1.Value.Date))
-                paramList.Add(New SqlParameter("@d2", DateTimePicker2.Value.Date.AddDays(1).AddMilliseconds(-1)))
+                'paramList.Add(New SqlParameter("@d2", DateTimePicker2.Value.Date.AddDays(1).AddMilliseconds(-1)))
+                paramList.Add(New SqlParameter("@d2", DateTimePicker2.Value.Date.AddMilliseconds(-1)))
                 Try
                     ret = objStock.StockTill(_ProductID, DateTimePicker1.Value.Date.AddSeconds(-1))
                 Catch ex As Exception
@@ -103,7 +104,12 @@
                 Next
             Catch ex As Exception
             End Try
-
+            Dim TotalFresh As Integer = Convert.ToInt32(dt.Compute("SUM(Fresh)", String.Empty))
+            Dim TotalFrozen As Integer = Convert.ToInt32(dt.Compute("SUM(Frozen)", String.Empty))
+            Dim TotalQty As Integer = Convert.ToInt32(dt.Compute("SUM(Qty)", String.Empty))
+            lblTotalFresh.Text = "Total Fresh: " + TotalFresh.ToString()
+            lblTotalFrozen.Text = "Total Frozen: " + TotalFrozen.ToString()
+            lblTotal.Text = "Total Qty.: " + TotalQty.ToString()
             dgHistory.DataSource = dt
             dgHistory.Columns(cls_tblStock.FieldName.CreatedBy.ToString).Visible = False
             dgHistory.Columns(cls_tblStock.FieldName.ProductId.ToString).Visible = False
