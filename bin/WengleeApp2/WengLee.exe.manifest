@@ -3,7 +3,7 @@
   <asmv1:assemblyIdentity name="WengLee.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="WengLee" version="2.0.0.6" language="neutral" processorArchitecture="x86" />
+    <assemblyIdentity name="WengLee" version="2.0.0.7" language="neutral" processorArchitecture="x86" />
     <commandLine file="WengLee.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -79,14 +79,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WengLee.exe" size="2579456">
-      <assemblyIdentity name="WengLee" version="2.0.0.6" language="neutral" processorArchitecture="x86" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WengLee.exe" size="2597376">
+      <assemblyIdentity name="WengLee" version="2.0.0.7" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>6qH6MCPd2f9yBuoff7CxVsgcocI=</dsig:DigestValue>
+        <dsig:DigestValue>tweoWByFja2tA3UgmQCitX+rG/M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

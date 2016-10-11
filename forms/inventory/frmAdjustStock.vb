@@ -1,5 +1,5 @@
 ﻿Public Class frmAdjustStock
-
+    Public isFz As Integer
     Private Sub frmAdjustStock_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         LoadItems()
     End Sub
@@ -8,7 +8,11 @@
 
         Dim ParameterList As New List(Of SqlParameter)
         ParameterList.Add(New SqlParameter("@StockTill", Now))
-        Dim dt As DataTable = objStock.Selection(cls_tblStock.SelectionType.All_Product, "", ParameterList)
+        Dim strWhereClause = ""
+        If isFz = 1 Then
+            strWhereClause = " FZStatus=1 "
+        End If
+        Dim dt As DataTable = objStock.Selection(cls_tblStock.SelectionType.All_Product, strWhereClause, ParameterList)
         dgInventory.DataSource = dt
         dgInventory.Columns("ProductID").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
         dgInventory.Columns("ProductCode").Visible = False
@@ -67,8 +71,8 @@
         Next
 
         dgInventory.Columns(2).DisplayIndex = dgInventory.ColumnCount - 1
-        dgInventory.Columns(1).DisplayIndex = dgInventory.ColumnCount - 2
-        dgInventory.Columns(0).DisplayIndex = dgInventory.ColumnCount - 3
+        dgInventory.Columns(1).DisplayIndex = dgInventory.ColumnCount - 3
+        dgInventory.Columns(0).DisplayIndex = dgInventory.ColumnCount - 2
     End Sub
     Private Sub frmAdjustStock_Shown(sender As Object, e As System.EventArgs) Handles Me.Shown
         WindowState = FormWindowState.Maximized

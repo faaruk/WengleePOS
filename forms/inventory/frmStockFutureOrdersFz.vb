@@ -1,17 +1,33 @@
-﻿Public Class frmStockFutureOrders
+﻿Public Class frmStockFutureOrdersFz
     Dim objProductPrice As New cls_tblStock
     Dim objProduct As New cls_tblProducts
 
     Private _ProductID As Integer = 0
-    Public Property ProductId As Integer
+     Public Property ProductId As Integer
         Get
             Return _ProductID
         End Get
         Set(value As Integer)
             _ProductID = value
             LoadList()
+
         End Set
     End Property
+    Sub UpdateColor()
+        Try
+            For Each dr As DataGridViewRow In dgHistory.Rows
+
+                If dr.Cells("AnticipatedInventory").Value <= 0 Then
+                    dr.Cells("AnticipatedInventory").Style.BackColor = Color.Red
+                Else
+                    dr.Cells("AnticipatedInventory").Style.BackColor = Color.White
+                End If
+
+            Next
+        Catch ex As Exception
+
+        End Try
+    End Sub
     Sub LoadList()
 
         Try
@@ -28,13 +44,20 @@
             End If
 
             Dim dt As DataTable = objProductPrice.Selection(cls_tblStock.SelectionType.FutureOrders, "a.[ProductId]=@ProductID and a.TransactionDate>@FromDate and a.TransactionType='ORDER' " & strNew & " Order By a.TransactionDate,f.stockid ", paramList)
+
             dgHistory.DataSource = dt
-            dgHistory.Columns(cls_tblStock.FieldName.CreatedBy.ToString).Visible = False
             dgHistory.Columns(cls_tblStock.FieldName.ProductId.ToString).Visible = False
             dgHistory.Columns(cls_tblStock.FieldName.Remarks.ToString).Visible = False
             dgHistory.Columns(cls_tblStock.FieldName.TransactionId.ToString).Visible = False
 
-            dgHistory.Columns("AnticipatedInventory").Visible = False
+            dgHistory.Columns("Fresh").Visible = False
+            dgHistory.Columns("Total Fresh").Visible = False
+            dgHistory.Columns("Qty").Visible = False
+            dgHistory.Columns("Total Qty").Visible = False
+            dgHistory.Columns("Stocktype1").Visible = False
+            dgHistory.Columns("TransactionDate").Visible = False
+            dgHistory.Columns("Frozen Qty Detail").Visible = False
+            dgHistory.Columns("Order/Invoice Date").Visible = False
 
             'dgHistory.Columns("Total Qty").Visible = False
 
@@ -49,6 +72,7 @@
 
     Private Sub frmPriceHistory_Shown(sender As Object, e As System.EventArgs) Handles Me.Shown
         Try
+            UpdateColor()
             dgHistory.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells)
             dgHistory.Columns(" ").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         Catch ex As Exception
@@ -123,4 +147,7 @@
         LoadList()
     End Sub
 
+    Private Sub dgHistory_Sorted(sender As System.Object, e As System.EventArgs) Handles dgHistory.Sorted
+        UpdateColor()
+    End Sub
 End Class

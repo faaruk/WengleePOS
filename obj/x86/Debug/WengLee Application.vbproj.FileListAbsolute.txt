@@ -520,3 +520,5 @@ E:\Activities\4. Cindy Tang\WengleePOSGit\obj\x86\Debug\WengLee.exe.manifest
 E:\Activities\4. Cindy Tang\WengleePOSGit\obj\x86\Debug\WengLee.application
 E:\Activities\4. Cindy Tang\WengleePOSGit\obj\x86\Debug\WengLee_Application.frmOrdersafterRoute.resources
 E:\Activities\4. Cindy Tang\WengleePOSGit\obj\x86\Debug\WengLee_Application.frmInventoryListFz.resources
+E:\Activities\4. Cindy Tang\WengleePOSGit\obj\x86\Debug\WengLee_Application.frmStockHistoryFz.resources
+E:\Activities\4. Cindy Tang\WengleePOSGit\obj\x86\Debug\WengLee_Application.frmStockFutureOrdersFz.resources

@@ -184,6 +184,7 @@ SELECT a.[ProductId]
       ,ISNULL(c.Fresh,0) as [FreshStock]
       ,ISNULL(c.Frozen,0) as [FrozenStock]
       ,convert(varchar,ISNULL(-d.Fresh,0)) + ',' + convert(varchar,ISNULL(-d.Frozen,0)) as [Future Orders]
+      ,convert(varchar,ISNULL(-d.Frozen,0)) as [Future FZ]
       ,ISNULL(e.TargetQty ,0) as [Target Stock Levels]
       --,(select Category + ' : ' + CONVERT(varchar,qty) + ', ' from tblSubStock where ProductId=a.ProductId for XML path('')) as [Frozen Qty Detail]
   FROM [tblProducts] a 

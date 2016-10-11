@@ -217,8 +217,8 @@ Partial Class frmInventoryListFz
         '
         'ColumnsFutureOrders
         '
-        Me.ColumnsFutureOrders.DataPropertyName = "Future Orders"
-        Me.ColumnsFutureOrders.HeaderText = "Future Fresh/Frozen"
+        Me.ColumnsFutureOrders.DataPropertyName = "Future FZ"
+        Me.ColumnsFutureOrders.HeaderText = "Future FZ"
         Me.ColumnsFutureOrders.Name = "ColumnsFutureOrders"
         '
         'ColumnVendor

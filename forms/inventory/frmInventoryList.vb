@@ -158,6 +158,8 @@
                 'DataGridView1.Columns("ColumnVendor").DisplayIndex = 23
                 DataGridView1.Columns("ColumnVendor").Visible = False
                 DataGridView1.Columns("ColumnsFutureOrders").DefaultCellStyle.Format = "#,##0"
+
+                DataGridView1.Columns("Future FZ").Visible = False
                 ''arranged = True
             End If
 
@@ -388,6 +390,7 @@
 
     Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
         Dim frm As New frmAdjustStock
+        frm.isFz = 0
         If frm.ShowDialog() = Windows.Forms.DialogResult.OK Then
             LoadItems()
         End If

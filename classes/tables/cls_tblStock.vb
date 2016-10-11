@@ -257,8 +257,11 @@ SELECT a.[StockId]
       ,a.[Stocktype]
       ,a.[Fresh]
       ,f.rtFs as [Total Fresh]
+      
       ,a.[Frozen]
       ,f.rtFz as [Total Frozen]
+        --,ISNULL(g.Frozen,0) as [FrozenStock]
+		,ISNULL(g.Frozen,0)+(-1*f.rtFz) as AnticipatedInventory
       ,a.[Qty]
       ,f.[rt] as [Total Qty]
       ,a.[TransactionId]
@@ -267,14 +270,15 @@ SELECT a.[StockId]
       , ISNULL (b.OrderDate ,d.PurchaseDate ) as [Order/Invoice Date]
       , ISNULL ( c.CustomerName , e.VendorName ) as [Customer/Vendor Name]
       ,a.[Stocktype]
-      ,a.[CreatedBy]
+      ,u.FullName CreatedBy
+      --,a.[CreatedBy]
       ,a.[CreatedDate]
       ,a.[Remarks]
       ,a.[TransactionDate]
       ,(select Category + ' : ' + CONVERT(varchar,qty) + ', ' from tblSubStock where StockId=a.StockId for XML path('')) as [Frozen Qty Detail]
-    
+        
  FROM [tblStock] a
-
+    left join tblUserDetails u on U.UserId=a.CreatedBy
     left outer join 
         tblOrder b on a.TransactionId = b.OrderId and a.TransactionType ='ORDER'
     left outer join
@@ -294,7 +298,9 @@ SELECT a.[StockId]
         where a.ProductId = @ProductId
         group by a.tt , a.StockId
     ) f on a.StockId = f.StockId 
-             
+    left join
+	(select sum( case when stocktype='IN' then  qty else -1 * qty end) as qty,sum( case when stocktype='IN' then  Fresh else -1 * Fresh end) as Fresh,sum( case when stocktype='IN' then  Frozen else -1 * Frozen end) as Frozen, productid from tblStock Where TransactionDate<@FromDate group by ProductId ) g 
+    on a.ProductId = g.ProductId                       
 WHERE a.Stocktype <> 'IN'
 
        ]]></tblStock_Select>.Value

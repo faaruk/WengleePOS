@@ -77,6 +77,7 @@ Partial Class frmMainAndAlsoStartupForm
         Me.ExitToWindowsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Splitter1 = New System.Windows.Forms.Splitter()
         Me.pnlShortcut = New System.Windows.Forms.Panel()
+        Me.btnFz = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnInventory = New System.Windows.Forms.Button()
@@ -95,7 +96,6 @@ Partial Class frmMainAndAlsoStartupForm
         Me.btnExit = New System.Windows.Forms.Button()
         Me.tmrVersionChecker = New System.Windows.Forms.Timer(Me.components)
         Me.tmrStartUpdater = New System.Windows.Forms.Timer(Me.components)
-        Me.btnFz = New System.Windows.Forms.Button()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.pnlShortcut.SuspendLayout()
@@ -352,8 +352,8 @@ Partial Class frmMainAndAlsoStartupForm
         '
         Me.MastersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CustomerToolStripMenuItem, Me.VendorsToolStripMenuItem, Me.ProductsToolStripMenuItem, Me.TruckToolStripMenuItem, Me.DriverToolStripMenuItem, Me.BOLAddressesToolStripMenuItem, Me.PriceListToolStripMenuItem, Me.PricesToolStripMenuItem, Me.OrderTemplateToolStripMenuItem, Me.ScheduleOrderToolStripMenuItem, Me.EmailSetupToolStripMenuItem, Me.MapTestToolStripMenuItem})
         Me.MastersToolStripMenuItem.Name = "MastersToolStripMenuItem"
-        Me.MastersToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
-        Me.MastersToolStripMenuItem.Text = "Masters"
+        Me.MastersToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
+        Me.MastersToolStripMenuItem.Text = "Menu"
         '
         'CustomerToolStripMenuItem
         '
@@ -389,7 +389,7 @@ Partial Class frmMainAndAlsoStartupForm
         '
         Me.BOLAddressesToolStripMenuItem.Name = "BOLAddressesToolStripMenuItem"
         Me.BOLAddressesToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
-        Me.BOLAddressesToolStripMenuItem.Text = "BOL Addresses"
+        Me.BOLAddressesToolStripMenuItem.Text = "BOL"
         '
         'PriceListToolStripMenuItem
         '
@@ -489,6 +489,18 @@ Partial Class frmMainAndAlsoStartupForm
         Me.pnlShortcut.Name = "pnlShortcut"
         Me.pnlShortcut.Size = New System.Drawing.Size(1362, 49)
         Me.pnlShortcut.TabIndex = 0
+        '
+        'btnFz
+        '
+        Me.btnFz.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnFz.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFz.Location = New System.Drawing.Point(822, 0)
+        Me.btnFz.Name = "btnFz"
+        Me.btnFz.Size = New System.Drawing.Size(85, 48)
+        Me.btnFz.TabIndex = 15
+        Me.btnFz.Text = "FZ Inventory"
+        Me.btnFz.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -681,18 +693,6 @@ Partial Class frmMainAndAlsoStartupForm
         'tmrStartUpdater
         '
         Me.tmrStartUpdater.Interval = 120000
-        '
-        'btnFz
-        '
-        Me.btnFz.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnFz.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnFz.Location = New System.Drawing.Point(822, 0)
-        Me.btnFz.Name = "btnFz"
-        Me.btnFz.Size = New System.Drawing.Size(85, 48)
-        Me.btnFz.TabIndex = 15
-        Me.btnFz.Text = "FZ Inventory"
-        Me.btnFz.UseVisualStyleBackColor = True
         '
         'frmMainAndAlsoStartupForm
         '

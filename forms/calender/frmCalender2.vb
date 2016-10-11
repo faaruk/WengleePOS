@@ -77,9 +77,11 @@
             Dim SelectStringLargeOrders2 = ""
             Dim SelectStringLargeOrders3 = ""
             If chkLargeOrders.Checked = True Then
-                SelectStringLargeOrders = " having sum (a.Fresh) + sum (a.Frozen)>=20 "
-                SelectStringLargeOrders2 = " AND a.OrderId in (select orderid from (SELECT  sum (Frozen)+sum(Fresh) as  'Frozen' , orderid  FROM [tblOrderItems] group by orderid) B where  B.Frozen>=20) "
-                SelectStringLargeOrders3 = " and a.OrderId in (select orderid from (SELECT  sum (Frozen)+sum(Fresh) as  'Frozen' , orderid  FROM [tblOrderScheduleItems] group by orderid) B where  B.Frozen>=20) "
+                'SelectStringLargeOrders = " having sum (a.Fresh) + sum (a.Frozen)>=20 "
+                'SelectStringLargeOrders2 = " AND a.OrderId in (select orderid from (SELECT  sum (Frozen)+sum(Fresh) as  'Frozen' , orderid  FROM [tblOrderItems] group by orderid) B where  B.Frozen>=20) "
+                SelectStringLargeOrders2 = " and ISNULL( h.Cs,0 )>=20 "
+                'SelectStringLargeOrders3 = " and a.OrderId in (select orderid from (SELECT  sum (Frozen)+sum(Fresh) as  'Frozen' , orderid  FROM [tblOrderScheduleItems] group by orderid) B where  B.Frozen>=20) "
+                SelectStringLargeOrders3 = " and ISNULL( h.Cs,0 )>=20 "
 
             End If
 

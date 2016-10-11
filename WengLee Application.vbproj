@@ -305,6 +305,18 @@
     <Compile Include="forms\employee\employee\frmImportEmployee.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="forms\inventory\frmStockFutureOrdersFz.Designer.vb">
+      <DependentUpon>frmStockFutureOrdersFz.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\inventory\frmStockFutureOrdersFz.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\inventory\frmStockHistoryFz.Designer.vb">
+      <DependentUpon>frmStockHistoryFz.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\inventory\frmStockHistoryFz.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\inventory\frmInventoryListFz.Designer.vb">
       <DependentUpon>frmInventoryListFz.vb</DependentUpon>
     </Compile>
@@ -802,6 +814,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\employee\employee\frmImportEmployee.resx">
       <DependentUpon>frmImportEmployee.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\inventory\frmStockFutureOrdersFz.resx">
+      <DependentUpon>frmStockFutureOrdersFz.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\inventory\frmStockHistoryFz.resx">
+      <DependentUpon>frmStockHistoryFz.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\inventory\frmInventoryListFz.resx">
       <DependentUpon>frmInventoryListFz.vb</DependentUpon>

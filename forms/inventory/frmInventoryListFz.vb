@@ -164,6 +164,9 @@
                 DataGridView1.Columns("ColumnsFutureOrders").DefaultCellStyle.Format = "#,##0"
                 DataGridView1.Columns("ColumnsFutureOrders").HeaderText = "Future FZ"
 
+
+                DataGridView1.Columns("Future Orders").Visible = False
+
                 DataGridView1.Columns("Column2").Visible = False
                 ''arranged = True
             End If
@@ -205,8 +208,8 @@
 
         Try
             If tmp.Trim = "" Then
-                'cmbProductCategory.Text = "ALL CATEGORIES"
-                cmbProductCategory.Text = "Poultry Parts/Meat"
+                cmbProductCategory.Text = "ALL CATEGORIES"
+                'cmbProductCategory.Text = "Poultry Parts/Meat"
             Else
                 cmbProductCategory.Text = tmp
             End If
@@ -259,9 +262,9 @@
                 'frm.Location = MousePosition
                 frm.ShowDialog()
             ElseIf e.ColumnIndex = 1 Then
-                Dim frm As New frmStockHistory
+                Dim frm As New frmStockHistoryFz
                 frm.chkDateRange.Checked = True
-                frm.DateTimePicker1.Value = Today.AddDays(-11)
+                frm.DateTimePicker1.Value = Now.Date.AddDays(1).AddMilliseconds(-1) 'Today.AddDays(-11)
                 frm.DateTimePicker2.MaxDate = Now.Date.AddDays(1).AddMilliseconds(-1)
                 frm.DateTimePicker2.Value = Now.Date.AddDays(1).AddMilliseconds(-1)
                 frm.ProductId = DataGridView1.Rows(e.RowIndex).Cells("ProductId").Value
@@ -270,9 +273,9 @@
                 Dim frm As New frmProductTarget
                 frm.ProductId = DataGridView1.Rows(e.RowIndex).Cells("ProductId").Value
                 frm.ShowDialog()
-            ElseIf e.ColumnIndex = 34 Then
-                Dim frm As New frmStockFutureOrders
-                frm.Text = "Future Orders"
+            ElseIf e.ColumnIndex = 35 Then
+                Dim frm As New frmStockFutureOrdersFz
+                frm.Text = "Future FZ Orders"
                 frm.ProductId = DataGridView1.Rows(e.RowIndex).Cells("ProductId").Value
                 frm.ShowDialog()
             ElseIf e.ColumnIndex = 4 Then
@@ -298,6 +301,7 @@
             DataGridView1.Columns("VendorItemCode").DisplayIndex = DataGridView1.Columns.Count - 1
             DataGridView1.Columns("ColumnVendor").DisplayIndex = DataGridView1.Columns.Count - 1
             DataGridView1.Columns("Column2").DisplayIndex = DataGridView1.Columns.Count - 1
+            DataGridView1.Columns("ColumnsFutureOrders").DisplayIndex = DataGridView1.Columns.Count - 1
             DataGridView1.Columns("UnitOfMeasure").Frozen = True
         Catch ex As Exception
         End Try
@@ -398,6 +402,7 @@
 
     Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
         Dim frm As New frmAdjustStock
+        frm.isFz = 1
         If frm.ShowDialog() = Windows.Forms.DialogResult.OK Then
             LoadItems()
         End If

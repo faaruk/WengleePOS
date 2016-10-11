@@ -148,11 +148,20 @@ Public Class VersionControl
         con = objCon.connect()
 
         Dim strSQL As String = " "
-        strSQL = "alter table tblProducts add FZStatus bit default 0; update tblProducts set FZStatus=0;"
+        strSQL = "alter table tblProducts add FZStatus bit default 0 "
 
         Try
             Dim com As New SqlCommand(strSQL, con)
             version = com.ExecuteScalar
+        Catch ex As Exception
+        End Try
+
+        strSQL = " "
+        strSQL = "update tblProducts set FZStatus=0;"
+
+        Try
+            Dim com1 As New SqlCommand(strSQL, con)
+            Dim version1 As Integer = com1.ExecuteScalar
         Catch ex As Exception
         End Try
 
