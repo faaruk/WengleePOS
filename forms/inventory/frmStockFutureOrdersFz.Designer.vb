@@ -28,6 +28,8 @@ Partial Class frmStockFutureOrdersFz
         Me.chkFresh = New System.Windows.Forms.CheckBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.dgHistory = New System.Windows.Forms.DataGridView()
+        Me.chkStatus = New System.Windows.Forms.CheckBox()
+        Me.lblTotalFrozen = New System.Windows.Forms.Label()
         CType(Me.dgHistory, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -59,7 +61,7 @@ Partial Class frmStockFutureOrdersFz
         Me.chkFrozen.AutoSize = True
         Me.chkFrozen.Checked = True
         Me.chkFrozen.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chkFrozen.Location = New System.Drawing.Point(893, 9)
+        Me.chkFrozen.Location = New System.Drawing.Point(701, 11)
         Me.chkFrozen.Name = "chkFrozen"
         Me.chkFrozen.Size = New System.Drawing.Size(58, 17)
         Me.chkFrozen.TabIndex = 8
@@ -71,9 +73,7 @@ Partial Class frmStockFutureOrdersFz
         '
         Me.chkFresh.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.chkFresh.AutoSize = True
-        Me.chkFresh.Checked = True
-        Me.chkFresh.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chkFresh.Location = New System.Drawing.Point(824, 9)
+        Me.chkFresh.Location = New System.Drawing.Point(632, 11)
         Me.chkFresh.Name = "chkFresh"
         Me.chkFresh.Size = New System.Drawing.Size(52, 17)
         Me.chkFresh.TabIndex = 9
@@ -90,7 +90,6 @@ Partial Class frmStockFutureOrdersFz
         Me.Button2.TabIndex = 7
         Me.Button2.Text = "Show"
         Me.Button2.UseVisualStyleBackColor = True
-        Me.Button2.Visible = False
         '
         'dgHistory
         '
@@ -110,11 +109,37 @@ Partial Class frmStockFutureOrdersFz
         Me.dgHistory.Size = New System.Drawing.Size(1112, 657)
         Me.dgHistory.TabIndex = 0
         '
+        'chkStatus
+        '
+        Me.chkStatus.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.chkStatus.AutoSize = True
+        Me.chkStatus.Checked = True
+        Me.chkStatus.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkStatus.Location = New System.Drawing.Point(806, 11)
+        Me.chkStatus.Name = "chkStatus"
+        Me.chkStatus.Size = New System.Drawing.Size(140, 17)
+        Me.chkStatus.TabIndex = 10
+        Me.chkStatus.Text = "Exclude Orders On Hold"
+        Me.chkStatus.UseVisualStyleBackColor = True
+        '
+        'lblTotalFrozen
+        '
+        Me.lblTotalFrozen.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.lblTotalFrozen.AutoSize = True
+        Me.lblTotalFrozen.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalFrozen.Location = New System.Drawing.Point(170, 712)
+        Me.lblTotalFrozen.Name = "lblTotalFrozen"
+        Me.lblTotalFrozen.Size = New System.Drawing.Size(82, 13)
+        Me.lblTotalFrozen.TabIndex = 11
+        Me.lblTotalFrozen.Text = "Total Frozen:"
+        '
         'frmStockFutureOrdersFz
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1111, 741)
+        Me.Controls.Add(Me.lblTotalFrozen)
+        Me.Controls.Add(Me.chkStatus)
         Me.Controls.Add(Me.chkFrozen)
         Me.Controls.Add(Me.chkFresh)
         Me.Controls.Add(Me.Button2)
@@ -135,4 +160,6 @@ Partial Class frmStockFutureOrdersFz
     Friend WithEvents chkFresh As System.Windows.Forms.CheckBox
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents dgHistory As System.Windows.Forms.DataGridView
+    Friend WithEvents chkStatus As System.Windows.Forms.CheckBox
+    Friend WithEvents lblTotalFrozen As System.Windows.Forms.Label
 End Class

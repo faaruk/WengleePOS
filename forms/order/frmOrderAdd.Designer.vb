@@ -23,9 +23,9 @@ Partial Class frmOrderAdd
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtOrderNo = New System.Windows.Forms.TextBox()
@@ -208,8 +208,8 @@ Partial Class frmOrderAdd
         '
         'QTY
         '
-        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.QTY.DefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.QTY.DefaultCellStyle = DataGridViewCellStyle1
         Me.QTY.HeaderText = "Case Qty"
         Me.QTY.Name = "QTY"
         Me.QTY.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic
@@ -246,16 +246,16 @@ Partial Class frmOrderAdd
         'Fresh
         '
         Me.Fresh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Fresh.DefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Fresh.DefaultCellStyle = DataGridViewCellStyle2
         Me.Fresh.HeaderText = "Fresh"
         Me.Fresh.Name = "Fresh"
         '
         'Frozen
         '
         Me.Frozen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.Frozen.DefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.Frozen.DefaultCellStyle = DataGridViewCellStyle3
         Me.Frozen.HeaderText = "Frozen"
         Me.Frozen.Name = "Frozen"
         '
@@ -292,7 +292,7 @@ Partial Class frmOrderAdd
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(35, 75)
+        Me.Label5.Location = New System.Drawing.Point(35, 100)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(73, 17)
         Me.Label5.TabIndex = 0
@@ -300,7 +300,7 @@ Partial Class frmOrderAdd
         '
         'txtRouteCity
         '
-        Me.txtRouteCity.Location = New System.Drawing.Point(114, 75)
+        Me.txtRouteCity.Location = New System.Drawing.Point(114, 100)
         Me.txtRouteCity.Name = "txtRouteCity"
         Me.txtRouteCity.ReadOnly = True
         Me.txtRouteCity.Size = New System.Drawing.Size(121, 23)
@@ -365,7 +365,7 @@ Partial Class frmOrderAdd
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.lblTotalCases)
         Me.GroupBox1.Controls.Add(Me.dgItemList)
-        Me.GroupBox1.Location = New System.Drawing.Point(38, 99)
+        Me.GroupBox1.Location = New System.Drawing.Point(38, 128)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(477, 412)
         Me.GroupBox1.TabIndex = 12
@@ -522,20 +522,16 @@ Partial Class frmOrderAdd
         '
         'txtDOP
         '
-        Me.txtDOP.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtDOP.Location = New System.Drawing.Point(137, 514)
+        Me.txtDOP.Location = New System.Drawing.Point(114, 73)
         Me.txtDOP.Name = "txtDOP"
         Me.txtDOP.ReadOnly = True
-        Me.txtDOP.Size = New System.Drawing.Size(378, 23)
+        Me.txtDOP.Size = New System.Drawing.Size(361, 23)
         Me.txtDOP.TabIndex = 24
         '
         'lblDOP
         '
-        Me.lblDOP.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblDOP.AutoSize = True
-        Me.lblDOP.Location = New System.Drawing.Point(35, 516)
+        Me.lblDOP.Location = New System.Drawing.Point(12, 75)
         Me.lblDOP.Name = "lblDOP"
         Me.lblDOP.Size = New System.Drawing.Size(98, 17)
         Me.lblDOP.TabIndex = 25

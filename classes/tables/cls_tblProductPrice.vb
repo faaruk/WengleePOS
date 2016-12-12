@@ -190,7 +190,8 @@ SELECT a.[ProductId]
   FROM [tblProducts] a 
    left outer join 
 
-  (select * from [tblProductPrice] where ItemSl in (Select MAX(itemsl) from tblProductPrice group by PID )) b
+  (select ItemSl, PID, CostPrice, SellPrice, EntryDate, UserId, UnitOfMesuare, VendorItemCode, tblVendor.VendorID
+ from [tblProductPrice] left join tblVendor on tblVendor.VendorID=tblProductPrice.VendorId  where ItemSl in (Select MAX(itemsl) from tblProductPrice group by PID )) b
     on a.ProductId = b.PID 
     left outer join
     (select sum( case when stocktype='IN' then  qty else -1 * qty end) as qty,sum( case when stocktype='IN' then  Fresh else -1 * Fresh end) as Fresh,sum( case when stocktype='IN' then  Frozen else -1 * Frozen end) as Frozen, productid from tblStock Where TransactionDate<=@StockTill group by ProductId ) c 

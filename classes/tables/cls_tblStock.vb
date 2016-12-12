@@ -268,6 +268,7 @@ SELECT a.[StockId]
       ,a.[TransactionType]
       , ISNULL ( b.OrderNo , d.InvoiceNo ) as [Order/Invoice No]
       , ISNULL (b.OrderDate ,d.PurchaseDate ) as [Order/Invoice Date]
+      , B.Status
       , ISNULL ( c.CustomerName , e.VendorName ) as [Customer/Vendor Name]
       ,a.[Stocktype]
       ,u.FullName CreatedBy
@@ -276,7 +277,7 @@ SELECT a.[StockId]
       ,a.[Remarks]
       ,a.[TransactionDate]
       ,(select Category + ' : ' + CONVERT(varchar,qty) + ', ' from tblSubStock where StockId=a.StockId for XML path('')) as [Frozen Qty Detail]
-        
+      ,p.UnitOfMeasure as [Unit] 
  FROM [tblStock] a
     left join tblUserDetails u on U.UserId=a.CreatedBy
     left outer join 
@@ -287,6 +288,7 @@ SELECT a.[StockId]
         tblPurchase d on a.TransactionId = d.PurchaseId and a.TransactionType ='PURCHASE'
     left outer join 
         tblVendor e on d.VendorId = e.VendorID 
+    left outer join [tblProducts] p on a.ProductId = p.ProductId 
     left outer join 
     (
         select a.StockId , SUM (case when b.Stocktype = 'IN' then -1 * isnull(b.Qty,0) else isnull(b.Qty,0) end ) as rt,
@@ -295,6 +297,71 @@ SELECT a.[StockId]
             (select ROW_NUMBER  () OVER (Order By  TransactionDate, stockid ) as tt,* from tblStock Where TransactionDate>=@FromDate) a
         left outer join 
             (select ROW_NUMBER  () OVER (Order By  TransactionDate, stockid ) as tt,* from tblStock Where TransactionDate>=@FromDate) b on b.tt<=a.tt and a.ProductId= b.ProductId
+        where a.ProductId = @ProductId
+        group by a.tt , a.StockId
+    ) f on a.StockId = f.StockId 
+    left join
+	(select sum( case when stocktype='IN' then  qty else -1 * qty end) as qty,sum( case when stocktype='IN' then  Fresh else -1 * Fresh end) as Fresh,sum( case when stocktype='IN' then  Frozen else -1 * Frozen end) as Frozen, productid from tblStock Where TransactionDate<@FromDate group by ProductId ) g 
+    on a.ProductId = g.ProductId                       
+WHERE a.Stocktype <> 'IN'
+
+       ]]></tblStock_Select>.Value
+        End Get
+    End Property
+
+    Private ReadOnly Property tblStock_Select_With_FutureOrdersWithOnHold
+        Get
+            Return <tblStock_Select><![CDATA[
+
+SELECT a.[StockId]
+      ,a.[ProductId]
+      ,a.[Stocktype]
+      ,a.[Fresh]
+      ,f.rtFs as [Total Fresh]
+      
+      ,a.[Frozen]
+      ,f.rtFz as [Total Frozen]
+        --,ISNULL(g.Frozen,0) as [FrozenStock]
+		,ISNULL(g.Frozen,0)+(-1*f.rtFz) as AnticipatedInventory
+      ,a.[Qty]
+      ,f.[rt] as [Total Qty]
+      ,a.[TransactionId]
+      ,a.[TransactionType]
+      , ISNULL ( b.OrderNo , d.InvoiceNo ) as [Order/Invoice No]
+      , ISNULL (b.OrderDate ,d.PurchaseDate ) as [Order/Invoice Date]
+      , B.Status
+      , ISNULL ( c.CustomerName , e.VendorName ) as [Customer/Vendor Name]
+      ,a.[Stocktype]
+      ,u.FullName CreatedBy
+      --,a.[CreatedBy]
+      ,a.[CreatedDate]
+      ,a.[Remarks]
+      ,a.[TransactionDate]
+      ,(select Category + ' : ' + CONVERT(varchar,qty) + ', ' from tblSubStock where StockId=a.StockId for XML path('')) as [Frozen Qty Detail]
+      ,p.UnitOfMeasure as [Unit] 
+ FROM [tblStock] a
+    left join tblUserDetails u on U.UserId=a.CreatedBy
+    left outer join 
+        tblOrder b on a.TransactionId = b.OrderId and a.TransactionType ='ORDER'
+    left outer join
+        tblCustomer c on b.CutomerId = c.CustomerID 
+    left outer join
+        tblPurchase d on a.TransactionId = d.PurchaseId and a.TransactionType ='PURCHASE'
+    left outer join 
+        tblVendor e on d.VendorId = e.VendorID 
+    left outer join [tblProducts] p on a.ProductId = p.ProductId 
+    left outer join 
+    (
+        select a.StockId , SUM (case when b.Stocktype = 'IN' then -1 * isnull(b.Qty,0) else isnull(b.Qty,0) end ) as rt,
+        SUM (case when b.Stocktype = 'IN' then  -1 * isnull(b.Fresh,0) else isnull(b.Fresh,0) end ) as rtFs,
+        SUM (case when b.Stocktype = 'IN' then  -1 * isnull(b.Frozen,0) else isnull(b.Frozen,0) end ) as rtFz from 
+            (select ROW_NUMBER  () OVER (Order By  TransactionDate, stockid ) as tt,tblStock.* from tblStock
+			inner join tblOrder on tblStock.TransactionId = tblOrder.OrderId and tblStock.TransactionType ='ORDER' and tblOrder.Status <> 'On Hold' 
+			 Where TransactionDate>=@FromDate) a
+        left outer join 
+            (select ROW_NUMBER  () OVER (Order By  TransactionDate, stockid ) as tt,tblStock.* from tblStock 
+            inner join tblOrder on tblStock.TransactionId = tblOrder.OrderId and tblStock.TransactionType ='ORDER' and tblOrder.Status <> 'On Hold' 
+            Where TransactionDate>=@FromDate) b on b.tt<=a.tt and a.ProductId= b.ProductId
         where a.ProductId = @ProductId
         group by a.tt , a.StockId
     ) f on a.StockId = f.StockId 
@@ -685,6 +752,7 @@ WHERE 1=1
         OtherInfo = 3
         FutureOrders = 4
         OtherInfo_withoutTotal = 5
+        FutureOrdersWithOutOnHold = 6
     End Enum
 
     Function Selection(Optional ByVal _selection_type As SelectionType = SelectionType.All, Optional ByVal _SelectString As String = "", Optional ByVal _params As List(Of SqlParameter) = Nothing, Optional ByVal _conn As SqlConnection = Nothing, Optional ByVal _transac As SqlTransaction = Nothing) As DataTable
@@ -713,6 +781,8 @@ WHERE 1=1
                 comSelection.CommandText = tblStock_Select_With_OtherInfo & IIf(_SelectString <> "", IIf(_selectstring.Trim.ToUpper.StartsWith("AND"), _SelectString, " AND " & _SelectString), "")
             Case SelectionType.FutureOrders
                 comSelection.CommandText = tblStock_Select_With_FutureOrders & IIf(_SelectString <> "", IIf(_SelectString.Trim.ToUpper.StartsWith("AND"), _SelectString, " AND " & _SelectString), "")
+            Case SelectionType.FutureOrdersWithOutOnHold
+                comSelection.CommandText = tblStock_Select_With_FutureOrdersWithOnHold & IIf(_SelectString <> "", IIf(_SelectString.Trim.ToUpper.StartsWith("AND"), _SelectString, " AND " & _SelectString), "")
             Case SelectionType.OtherInfo_withoutTotal
                 comSelection.CommandText = tblStock_Select_With_OtherInfo_withoutTotal & IIf(_SelectString <> "", IIf(_SelectString.Trim.ToUpper.StartsWith("AND"), _SelectString, " AND " & _SelectString), "")
 

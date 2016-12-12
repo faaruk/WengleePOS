@@ -22,6 +22,11 @@
                 Else
                     dr.Cells("AnticipatedInventory").Style.BackColor = Color.White
                 End If
+                If dr.Cells("Status").Value = "On Hold" Then
+                    dr.Cells("Status").Style.BackColor = Color.Yellow
+                Else
+                    dr.Cells("Status").Style.BackColor = Color.White
+                End If
 
             Next
         Catch ex As Exception
@@ -35,6 +40,7 @@
             paramList.Add(New SqlParameter("@FromDate", Now))
             paramList.Add(New SqlParameter("@ProductID", _ProductID))
             Dim strNew As String = ""
+
             If chkFresh.Checked And chkFrozen.Checked Then
 
             ElseIf chkFresh.Checked Then
@@ -42,8 +48,24 @@
             ElseIf chkFrozen.Checked Then
                 strNew += " and a.Frozen >0"
             End If
+            If chkStatus.Checked Then
+                strNew += " and B.Status <> 'On Hold'"
+            End If
+            Dim dt As DataTable
+            If chkStatus.Checked Then
+                dt = objProductPrice.Selection(cls_tblStock.SelectionType.FutureOrdersWithOutOnHold, "a.[ProductId]=@ProductID and a.TransactionDate>@FromDate and a.TransactionType='ORDER' " & strNew & " Order By a.TransactionDate,f.stockid ", paramList)
+            Else
+                dt = objProductPrice.Selection(cls_tblStock.SelectionType.FutureOrders, "a.[ProductId]=@ProductID and a.TransactionDate>@FromDate and a.TransactionType='ORDER' " & strNew & " Order By a.TransactionDate,f.stockid ", paramList)
+            End If
 
-            Dim dt As DataTable = objProductPrice.Selection(cls_tblStock.SelectionType.FutureOrders, "a.[ProductId]=@ProductID and a.TransactionDate>@FromDate and a.TransactionType='ORDER' " & strNew & " Order By a.TransactionDate,f.stockid ", paramList)
+            Dim Str As Integer = 0
+            For Each dr As DataRow In dt.Rows
+                If dr("Unit").ToString.ToUpper.Contains("CASE") Then
+                    Str += dr("Frozen").ToString
+                End If
+            Next
+            lblTotalFrozen.Text = "Total Frozen: " + Str.ToString() + " Case(s)"
+
 
             dgHistory.DataSource = dt
             dgHistory.Columns(cls_tblStock.FieldName.ProductId.ToString).Visible = False
@@ -57,7 +79,7 @@
             dgHistory.Columns("Stocktype1").Visible = False
             dgHistory.Columns("TransactionDate").Visible = False
             dgHistory.Columns("Frozen Qty Detail").Visible = False
-            dgHistory.Columns("Order/Invoice Date").Visible = False
+            'dgHistory.Columns("Order/Invoice Date").Visible = False
 
             'dgHistory.Columns("Total Qty").Visible = False
 
@@ -145,6 +167,7 @@
 
     Private Sub Button2_Click(sender As System.Object, e As System.EventArgs) Handles Button2.Click
         LoadList()
+        UpdateColor()
     End Sub
 
     Private Sub dgHistory_Sorted(sender As System.Object, e As System.EventArgs) Handles dgHistory.Sorted

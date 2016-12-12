@@ -172,21 +172,24 @@
             If dgOrder.Columns(cls_tblOrder.FieldName.Comments.ToString).Width > 250 Then
                 dgOrder.Columns(cls_tblOrder.FieldName.Comments.ToString).Width = 250
             End If
-            dgOrder.Columns(cls_tblOrder.FieldName.Status.ToString).DisplayIndex = 8
+            dgOrder.Columns("BOL").DisplayIndex = 8
+            dgOrder.Columns("Drop Off Point").DisplayIndex = 9
 
-            dgOrder.Columns(cls_tblOrder.FieldName.CreatedBy.ToString).DisplayIndex = 9
+            dgOrder.Columns(cls_tblOrder.FieldName.Status.ToString).DisplayIndex = 10
+
+            dgOrder.Columns(cls_tblOrder.FieldName.CreatedBy.ToString).DisplayIndex = 11
             'dgOrder.Columns(cls_tblOrder.FieldName.CreatedDate.ToString).DisplayIndex = 10
             'dgOrder.Columns(cls_tblOrder.FieldName.CreatedDate.ToString).Width = 90
 
-            dgOrder.Columns(cls_tblOrder.FieldName.UpdatedBy.ToString).DisplayIndex = 10
-            dgOrder.Columns(cls_tblOrder.FieldName.UpdatedDate.ToString).DisplayIndex = 11
+            dgOrder.Columns(cls_tblOrder.FieldName.UpdatedBy.ToString).DisplayIndex = 12
+            dgOrder.Columns(cls_tblOrder.FieldName.UpdatedDate.ToString).DisplayIndex = 13
             dgOrder.Columns(cls_tblOrder.FieldName.UpdatedDate.ToString).Width = 90
             dgOrder.Columns(cls_tblOrder.FieldName.UpdatedDate.ToString).HeaderText = "Updated On"
 
-            dgOrder.Columns(cls_tblOrder.FieldName.OrderNo.ToString).DisplayIndex = 12
-            dgOrder.Columns(cls_tblOrder.FieldName.Session.ToString).DisplayIndex = 13
+            dgOrder.Columns(cls_tblOrder.FieldName.OrderNo.ToString).DisplayIndex = 14
+            dgOrder.Columns(cls_tblOrder.FieldName.Session.ToString).DisplayIndex = 15
             dgOrder.Columns(cls_tblOrder.FieldName.Session.ToString).Width = 70
-            dgOrder.Columns(cls_tblOrder.FieldName.Remarks.ToString).DisplayIndex = 14
+            dgOrder.Columns(cls_tblOrder.FieldName.Remarks.ToString).DisplayIndex = 16
             ' dgOrder.Columns("Drop Off Point").DisplayIndex = 13
             Counter()
 

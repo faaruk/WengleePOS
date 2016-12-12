@@ -33,6 +33,7 @@
             dgHistory.Columns(cls_tblStock.FieldName.ProductId.ToString).Visible = False
             dgHistory.Columns(cls_tblStock.FieldName.Remarks.ToString).Visible = False
             dgHistory.Columns(cls_tblStock.FieldName.TransactionId.ToString).Visible = False
+            dgHistory.Columns("Status").Visible = False
 
             dgHistory.Columns("AnticipatedInventory").Visible = False
 

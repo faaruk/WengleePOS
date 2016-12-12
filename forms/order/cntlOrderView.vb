@@ -31,6 +31,13 @@
                 Dim fl As cls_tblCustomer.Fields = objCustomer.Selection_One_Row(order.CutomerId)
                 CutOf = fl.Receiving_CutOff
                 Label1.Text += " Customer ".PadRight(12) & ": " & fl.CustomerName & vbNewLine
+
+                If order.BOLAddressID <> 0 Then
+                    Dim objCustomerBOL As New cls_tblCustomer_BOL
+                    Dim fl2 As cls_tblCustomer_BOL.Fields = objCustomerBOL.Selection_One_Row(order.BOLAddressID)
+                    Label1.Text += " Drop Off Point ".PadRight(12) & ": " & fl2.DropOffPoint & vbNewLine
+                End If
+
                 Label1.Text += " Status ".PadRight(12) & ": " & order.Status.Trim & vbNewLine
 
                 Label1.Text += " Created by ".PadRight(12) & ": " & objUserDetails.Selection_One_Row(order.CreatedBy).UserName_ & vbNewLine

@@ -269,8 +269,8 @@
                     btnLinkAddress.Text = "Link BOL Drop-Off"
                     btnLinkAddress.UseVisualStyleBackColor = True
                     txtDOP.Text = ""
-                    lblDOP.Visible = False
-                    txtDOP.Visible = False
+                    'lblDOP.Visible = False
+                    'txtDOP.Visible = False
                 Else
                     btnShowBOLAddress.Visible = True
                     btnLinkAddress.BackColor = Color.Green
@@ -372,8 +372,8 @@
         Else
             btnShowBOLAddress.Visible = False
             BOLAddressID = 0
-            lblDOP.Visible = False
-            txtDOP.Visible = False
+            'lblDOP.Visible = False
+            'txtDOP.Visible = False
             txtDOP.Text = ""
             btnLinkAddress.BackColor = Nothing
             btnLinkAddress.Text = "Link BOL Drop-Off"
@@ -494,8 +494,8 @@
 
         BOLAddressID = 0
         txtDOP.Text = ""
-        lblDOP.Visible = False
-        txtDOP.Visible = False
+        'lblDOP.Visible = False
+        'txtDOP.Visible = False
         btnLinkAddress.BackColor = Nothing
         btnLinkAddress.Text = "Link BOL Drop-Off"
         btnLinkAddress.UseVisualStyleBackColor = True

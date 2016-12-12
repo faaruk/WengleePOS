@@ -186,13 +186,16 @@ WHERE 1=1
     SELECT b.ProductId,b.ProductName,b.Category ,sum (a.Fresh) as 'Fresh' ,sum (a.Frozen) as  'Frozen',sum (a.Fresh) + sum (a.Frozen) as [Total],b. UnitOfMeasure as [Unit],'' as [ ] 
     ,convert(varchar,ISNULL(-d.Fresh,0)) + ',' + convert(varchar,ISNULL(-d.Frozen,0)) as [Future Orders]
   FROM tblStock a
+    inner join tblOrder O on o.Status<>'On Hold' and a.stocktype='OUT' and a.TransactionType='ORDER' and a.TransactionId=o.OrderId --Added by Faruk on Oct 15, 2016 as Cindy asked to exclude purchase + on hold
   left outer join [tblProducts] b
     on a.ProductId = b.ProductId 
     left outer join
 		    (select sum( case when stocktype='IN' then  qty*0 else -1 * qty end) as qty,
 		    sum( case when stocktype='IN' then  Fresh*0 else -1 * Fresh end) as Fresh,
 		    sum( case when stocktype='IN' then Frozen*0 else -1 * Frozen end) as Frozen, 
-		    productid from tblStock Where TransactionDate>getdate() group by ProductId ) d 
+		    productid from tblStock 
+            --inner join tblOrder O on o.Status<>'On Hold' and k.stocktype='OUT' and k.TransactionType='ORDER' and k.TransactionId=o.OrderId  --Added by Faruk on Oct 15, 2016 as Cindy asked to exclude purchase + on hold
+            Where TransactionDate>getdate() group by ProductId ) d 
 	    on d.ProductId=a.ProductId
         --where a.OrderId in (select OrderId from tblOrder where OrderDate between @d1 and @d2) #####
           where a.TransactionDate between @d1 and @d2 #####

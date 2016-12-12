@@ -19,14 +19,27 @@
         Try
             OpenOrderId = orderID
             Button1.Visible = Not ScheduleDate = Nothing
+
             Dim order As cls_tblOrderSchedule.Fields = objOrder.Selection_One_Row(orderID)
+
+            
+
+
             Try
                 Label1.Text = "" & vbNewLine
                 Label1.Text += " Order# ".PadRight(12) & ": " & order.OrderNo & vbNewLine
                 Label1.Text += " Date ".PadRight(12) & ": " & order.OrderDate.ToShortDateString & vbNewLine
 
                 Label1.Text += " Name ".PadRight(12) & ": " & objCustomer.Selection_One_Row(order.CutomerId).CustomerName & vbNewLine
+
+                If order.BOLAddressID <> 0 Then
+                    Dim objCustomerBOL As New cls_tblCustomer_BOL
+                    Dim fl As cls_tblCustomer_BOL.Fields = objCustomerBOL.Selection_One_Row(order.BOLAddressID)
+                    Label1.Text += " Drop Off Point ".PadRight(12) & ": " & fl.DropOffPoint & vbNewLine
+                End If
+
                 Label1.Text += " Status ".PadRight(12) & ": " & order.Status.Trim & vbNewLine
+
 
                 Label1.Text += " Created by ".PadRight(12) & ": " & objUserDetails.Selection_One_Row(order.CreatedBy).UserName_ & vbNewLine
                 Label1.Text += " Updated by ".PadRight(12) & ": " & objUserDetails.Selection_One_Row(order.UpdatedBy).UserName_
