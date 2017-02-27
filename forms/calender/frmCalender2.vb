@@ -5,7 +5,7 @@
     Dim objNotes As New cls_tblNotes
 
     Private Sub frmCalender2_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        cmbBOL.SelectedIndex = 1
+        cmbBOL.SelectedIndex = 0
         GetValues()
     End Sub
 
@@ -172,6 +172,7 @@
                     End If
 
 
+
                     'DataGridView1.Rows(j + 1).Cells(i + 1).Value = dr("CustomerName").ToString.Substring(0, 10) & ", " & _
                     'dr("Total Cases") & " Cases" '& vbNewLine & _
                     '"Total " & dr("TotalItems") & " items" & vbNewLine '& _
@@ -290,6 +291,7 @@
     End Sub
     Private Sub frmCalender2_Shown(sender As Object, e As System.EventArgs) Handles Me.Shown
         WindowState = FormWindowState.Maximized
+        lblRGB.BackColor = Color.FromArgb(192, 255, 192)
     End Sub
 
     Private Sub DateTimePicker1_ValueChanged(sender As System.Object, e As System.EventArgs) Handles txtDate.ValueChanged

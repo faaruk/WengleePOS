@@ -23,6 +23,8 @@ Partial Class frmCreateRoute
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.cmbRouteCity = New System.Windows.Forms.ComboBox()
+        Me.chkRouteCity = New System.Windows.Forms.CheckBox()
         Me.lblTotalOrder = New System.Windows.Forms.Label()
         Me.dgOrder = New System.Windows.Forms.DataGridView()
         Me.Column4 = New System.Windows.Forms.DataGridViewButtonColumn()
@@ -46,12 +48,6 @@ Partial Class frmCreateRoute
         Me.btnSaveAndPrintRoute = New System.Windows.Forms.Button()
         Me.txtRouteName = New System.Windows.Forms.TextBox()
         Me.dgRouteCities = New System.Windows.Forms.DataGridView()
-        Me.lblCaseTotal = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Splitter1 = New System.Windows.Forms.Splitter()
-        Me.cmbRouteCity = New System.Windows.Forms.ComboBox()
-        Me.chkRouteCity = New System.Windows.Forms.CheckBox()
         Me.OrderID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.OrderNO = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.RouteCity = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -59,6 +55,10 @@ Partial Class frmCreateRoute
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lblCaseTotal = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Splitter1 = New System.Windows.Forms.Splitter()
         Me.Panel1.SuspendLayout()
         CType(Me.dgOrder, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -87,6 +87,28 @@ Partial Class frmCreateRoute
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(675, 459)
         Me.Panel1.TabIndex = 0
+        '
+        'cmbRouteCity
+        '
+        Me.cmbRouteCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbRouteCity.Enabled = False
+        Me.cmbRouteCity.FormattingEnabled = True
+        Me.cmbRouteCity.Items.AddRange(New Object() {"-Select-", "Open", "Fulfilled", "Delivered", "Cancelled", "No Order", "On Hold"})
+        Me.cmbRouteCity.Location = New System.Drawing.Point(101, 34)
+        Me.cmbRouteCity.Name = "cmbRouteCity"
+        Me.cmbRouteCity.Size = New System.Drawing.Size(171, 24)
+        Me.cmbRouteCity.TabIndex = 35
+        '
+        'chkRouteCity
+        '
+        Me.chkRouteCity.AutoSize = True
+        Me.chkRouteCity.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.chkRouteCity.Location = New System.Drawing.Point(2, 36)
+        Me.chkRouteCity.Name = "chkRouteCity"
+        Me.chkRouteCity.Size = New System.Drawing.Size(92, 21)
+        Me.chkRouteCity.TabIndex = 34
+        Me.chkRouteCity.Text = "Route City"
+        Me.chkRouteCity.UseVisualStyleBackColor = True
         '
         'lblTotalOrder
         '
@@ -154,7 +176,7 @@ Partial Class frmCreateRoute
         Me.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbStatus.Enabled = False
         Me.cmbStatus.FormattingEnabled = True
-        Me.cmbStatus.Items.AddRange(New Object() {"-Select-", "Open", "Fulfilled", "Delivered", "Cancelled", "No Order", "On Hold"})
+        Me.cmbStatus.Items.AddRange(New Object() {"-Select-", "Open", "Fulfilled", "Delivered", "Cancelled", "No Order", "On Hold", "Picked"})
         Me.cmbStatus.Location = New System.Drawing.Point(101, 7)
         Me.cmbStatus.Name = "cmbStatus"
         Me.cmbStatus.Size = New System.Drawing.Size(171, 24)
@@ -349,67 +371,6 @@ Partial Class frmCreateRoute
         Me.dgRouteCities.Size = New System.Drawing.Size(315, 306)
         Me.dgRouteCities.TabIndex = 10
         '
-        'lblCaseTotal
-        '
-        Me.lblCaseTotal.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblCaseTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCaseTotal.Location = New System.Drawing.Point(111, 385)
-        Me.lblCaseTotal.Name = "lblCaseTotal"
-        Me.lblCaseTotal.Size = New System.Drawing.Size(217, 34)
-        Me.lblCaseTotal.TabIndex = 14
-        Me.lblCaseTotal.Text = "0 Cases"
-        Me.lblCaseTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 39)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(44, 17)
-        Me.Label3.TabIndex = 17
-        Me.Label3.Text = "Truck"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(152, 39)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(46, 17)
-        Me.Label4.TabIndex = 18
-        Me.Label4.Text = "Driver"
-        '
-        'Splitter1
-        '
-        Me.Splitter1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Splitter1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Splitter1.Location = New System.Drawing.Point(670, 0)
-        Me.Splitter1.Name = "Splitter1"
-        Me.Splitter1.Size = New System.Drawing.Size(5, 459)
-        Me.Splitter1.TabIndex = 2
-        Me.Splitter1.TabStop = False
-        '
-        'cmbRouteCity
-        '
-        Me.cmbRouteCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbRouteCity.Enabled = False
-        Me.cmbRouteCity.FormattingEnabled = True
-        Me.cmbRouteCity.Items.AddRange(New Object() {"-Select-", "Open", "Fulfilled", "Delivered", "Cancelled", "No Order", "On Hold"})
-        Me.cmbRouteCity.Location = New System.Drawing.Point(101, 34)
-        Me.cmbRouteCity.Name = "cmbRouteCity"
-        Me.cmbRouteCity.Size = New System.Drawing.Size(171, 24)
-        Me.cmbRouteCity.TabIndex = 35
-        '
-        'chkRouteCity
-        '
-        Me.chkRouteCity.AutoSize = True
-        Me.chkRouteCity.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.chkRouteCity.Location = New System.Drawing.Point(2, 36)
-        Me.chkRouteCity.Name = "chkRouteCity"
-        Me.chkRouteCity.Size = New System.Drawing.Size(92, 21)
-        Me.chkRouteCity.TabIndex = 34
-        Me.chkRouteCity.Text = "Route City"
-        Me.chkRouteCity.UseVisualStyleBackColor = True
-        '
         'OrderID
         '
         Me.OrderID.HeaderText = "OrderID"
@@ -423,7 +384,7 @@ Partial Class frmCreateRoute
         Me.OrderNO.HeaderText = "Order NO"
         Me.OrderNO.Name = "OrderNO"
         Me.OrderNO.ReadOnly = True
-        Me.OrderNO.Width = 95
+        Me.OrderNO.Width = 87
         '
         'RouteCity
         '
@@ -463,6 +424,45 @@ Partial Class frmCreateRoute
         Me.Column1.HeaderText = ""
         Me.Column1.Name = "Column1"
         Me.Column1.ReadOnly = True
+        '
+        'lblCaseTotal
+        '
+        Me.lblCaseTotal.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblCaseTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCaseTotal.Location = New System.Drawing.Point(111, 385)
+        Me.lblCaseTotal.Name = "lblCaseTotal"
+        Me.lblCaseTotal.Size = New System.Drawing.Size(217, 34)
+        Me.lblCaseTotal.TabIndex = 14
+        Me.lblCaseTotal.Text = "0 Cases"
+        Me.lblCaseTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(6, 39)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(44, 17)
+        Me.Label3.TabIndex = 17
+        Me.Label3.Text = "Truck"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(152, 39)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(46, 17)
+        Me.Label4.TabIndex = 18
+        Me.Label4.Text = "Driver"
+        '
+        'Splitter1
+        '
+        Me.Splitter1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Splitter1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Splitter1.Location = New System.Drawing.Point(670, 0)
+        Me.Splitter1.Name = "Splitter1"
+        Me.Splitter1.Size = New System.Drawing.Size(5, 459)
+        Me.Splitter1.TabIndex = 2
+        Me.Splitter1.TabStop = False
         '
         'frmCreateRoute
         '

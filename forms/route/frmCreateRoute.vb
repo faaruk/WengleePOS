@@ -116,10 +116,14 @@
             Dim SelectString As String = ""
             Dim pp As New List(Of SqlParameter)
             SelectString = " AND a.[" & cls_tblOrder.FieldName.OrderId.ToString & "] not in (Select OrderId from tblRouteOrders where RouteID<>" & EditRouteID.ToString & ")"
+
             If chkStatus.Checked Then
                 SelectString += " AND a.[" & cls_tblOrder.FieldName.Status.ToString & "]=@status"
                 pp.Add(New SqlParameter("@status", cmbStatus.Text))
+            Else
+                SelectString += " AND a.[" & cls_tblOrder.FieldName.Status.ToString & "] in ('Open','Fulfilled','Picked')"
             End If
+
             If chkDateRange.Checked Then 'And SelectedRoute.Trim = ""
                 SelectString += " AND a.[" & cls_tblOrder.FieldName.OrderDate.ToString & "] Between @d1 and @d2"
                 pp.Add(New SqlParameter("@d1", dtpFrom.Value.Date))
@@ -232,7 +236,7 @@
 
     Private Sub frmCreateRoute_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         LoadRouteCity()
-        chkStatus.Checked = True
+        'chkStatus.Checked = True
         cmbStatus.SelectedIndex = 1
         chkDateRange.Checked = True
         'dtpFrom.Value = Today
