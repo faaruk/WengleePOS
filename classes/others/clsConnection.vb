@@ -46,7 +46,7 @@ Public Class clsConnection
         'If My.Computer.Name.ToUpper = "BIDYUT-LAPTOP" Or My.Computer.Name.ToUpper = "BIDYUT" Then
         If My.Computer.Name.ToUpper = "USER-PC" Then
             'Return "Data Source=192.168.0.99;Initial Catalog=dbWengLee;User ID=sa; password=Kumar"
-            Return "Data Source=USER-PC\SQL2014;Initial Catalog=dbWengLeeJan0517;User ID=sa; password=sql2014"
+            Return "Data Source=USER-PC\SQL2014;Initial Catalog=dbWengLee;User ID=sa; password=sql2014"
         Else
             Return "Data Source=WLFSERVER;Initial Catalog=dbWenglee;User ID=Odesk; password=PickAdmin!"
             'Return "Data Source=USER-PC\SQL2014;Initial Catalog=dbWenglee;User ID=sa; password=sql2014"

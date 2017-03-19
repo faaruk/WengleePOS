@@ -32,6 +32,8 @@ Partial Class frmOrdersView
         Me.cmbStatus = New System.Windows.Forms.ComboBox()
         Me.btnRefresh = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.cmbRouteCity = New System.Windows.Forms.ComboBox()
+        Me.chkRouteCity = New System.Windows.Forms.CheckBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.cmbCustomer = New System.Windows.Forms.ComboBox()
         Me.chkCustomer = New System.Windows.Forms.CheckBox()
@@ -52,8 +54,6 @@ Partial Class frmOrdersView
         Me.btnPrintSalesOrder = New System.Windows.Forms.Button()
         Me.btnPrint = New System.Windows.Forms.Button()
         Me.btnViewRoute = New System.Windows.Forms.Button()
-        Me.cmbRouteCity = New System.Windows.Forms.ComboBox()
-        Me.chkRouteCity = New System.Windows.Forms.CheckBox()
         Me.CntlOrderView1 = New WengLee_Application.cntlOrderView()
         CType(Me.dgOrder, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -184,6 +184,28 @@ Partial Class frmOrdersView
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(788, 453)
         Me.Panel1.TabIndex = 10
+        '
+        'cmbRouteCity
+        '
+        Me.cmbRouteCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbRouteCity.Enabled = False
+        Me.cmbRouteCity.FormattingEnabled = True
+        Me.cmbRouteCity.Items.AddRange(New Object() {"-Select-", "Open", "Fulfilled", "Delivered", "Cancelled", "No Order", "On Hold"})
+        Me.cmbRouteCity.Location = New System.Drawing.Point(439, 28)
+        Me.cmbRouteCity.Name = "cmbRouteCity"
+        Me.cmbRouteCity.Size = New System.Drawing.Size(130, 24)
+        Me.cmbRouteCity.TabIndex = 31
+        '
+        'chkRouteCity
+        '
+        Me.chkRouteCity.AutoSize = True
+        Me.chkRouteCity.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.chkRouteCity.Location = New System.Drawing.Point(343, 31)
+        Me.chkRouteCity.Name = "chkRouteCity"
+        Me.chkRouteCity.Size = New System.Drawing.Size(92, 21)
+        Me.chkRouteCity.TabIndex = 30
+        Me.chkRouteCity.Text = "Route City"
+        Me.chkRouteCity.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -400,28 +422,6 @@ Partial Class frmOrdersView
         Me.btnViewRoute.TabIndex = 33
         Me.btnViewRoute.Text = "View Route"
         Me.btnViewRoute.UseVisualStyleBackColor = True
-        '
-        'cmbRouteCity
-        '
-        Me.cmbRouteCity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbRouteCity.Enabled = False
-        Me.cmbRouteCity.FormattingEnabled = True
-        Me.cmbRouteCity.Items.AddRange(New Object() {"-Select-", "Open", "Fulfilled", "Delivered", "Cancelled", "No Order", "On Hold"})
-        Me.cmbRouteCity.Location = New System.Drawing.Point(439, 28)
-        Me.cmbRouteCity.Name = "cmbRouteCity"
-        Me.cmbRouteCity.Size = New System.Drawing.Size(130, 24)
-        Me.cmbRouteCity.TabIndex = 31
-        '
-        'chkRouteCity
-        '
-        Me.chkRouteCity.AutoSize = True
-        Me.chkRouteCity.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.chkRouteCity.Location = New System.Drawing.Point(343, 31)
-        Me.chkRouteCity.Name = "chkRouteCity"
-        Me.chkRouteCity.Size = New System.Drawing.Size(92, 21)
-        Me.chkRouteCity.TabIndex = 30
-        Me.chkRouteCity.Text = "Route City"
-        Me.chkRouteCity.UseVisualStyleBackColor = True
         '
         'CntlOrderView1
         '

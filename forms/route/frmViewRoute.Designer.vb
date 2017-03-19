@@ -36,6 +36,9 @@ Partial Class frmViewRoute
         Me.Button3 = New System.Windows.Forms.Button()
         Me.lblTotalOrder = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.lblTotalCases = New System.Windows.Forms.Label()
+        Me.lblTotalItems = New System.Windows.Forms.Label()
+        Me.lblTotalOrders = New System.Windows.Forms.Label()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.cmbRouteCity = New System.Windows.Forms.ComboBox()
         Me.chkRouteCity = New System.Windows.Forms.CheckBox()
@@ -68,7 +71,7 @@ Partial Class frmViewRoute
         Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(866, 455)
+        Me.DataGridView1.Size = New System.Drawing.Size(1081, 455)
         Me.DataGridView1.TabIndex = 1
         '
         'Column3
@@ -101,7 +104,7 @@ Partial Class frmViewRoute
         'btnRefresh
         '
         Me.btnRefresh.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnRefresh.Location = New System.Drawing.Point(678, 7)
+        Me.btnRefresh.Location = New System.Drawing.Point(893, 7)
         Me.btnRefresh.Margin = New System.Windows.Forms.Padding(4)
         Me.btnRefresh.Name = "btnRefresh"
         Me.btnRefresh.Size = New System.Drawing.Size(101, 26)
@@ -113,7 +116,7 @@ Partial Class frmViewRoute
         '
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(530, 12)
+        Me.Label1.Location = New System.Drawing.Point(745, 12)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(25, 17)
@@ -126,7 +129,7 @@ Partial Class frmViewRoute
         Me.dtpTo.CustomFormat = "MM/dd/yyyy"
         Me.dtpTo.Enabled = False
         Me.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpTo.Location = New System.Drawing.Point(565, 9)
+        Me.dtpTo.Location = New System.Drawing.Point(780, 9)
         Me.dtpTo.Margin = New System.Windows.Forms.Padding(4)
         Me.dtpTo.Name = "dtpTo"
         Me.dtpTo.Size = New System.Drawing.Size(107, 23)
@@ -138,7 +141,7 @@ Partial Class frmViewRoute
         Me.dtpFrom.CustomFormat = "MM/dd/yyyy"
         Me.dtpFrom.Enabled = False
         Me.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpFrom.Location = New System.Drawing.Point(415, 9)
+        Me.dtpFrom.Location = New System.Drawing.Point(630, 9)
         Me.dtpFrom.Margin = New System.Windows.Forms.Padding(4)
         Me.dtpFrom.Name = "dtpFrom"
         Me.dtpFrom.Size = New System.Drawing.Size(107, 23)
@@ -151,7 +154,7 @@ Partial Class frmViewRoute
         Me.chkDateRange.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.chkDateRange.Checked = True
         Me.chkDateRange.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.chkDateRange.Location = New System.Drawing.Point(300, 10)
+        Me.chkDateRange.Location = New System.Drawing.Point(515, 10)
         Me.chkDateRange.Margin = New System.Windows.Forms.Padding(4)
         Me.chkDateRange.Name = "chkDateRange"
         Me.chkDateRange.Size = New System.Drawing.Size(107, 21)
@@ -162,7 +165,7 @@ Partial Class frmViewRoute
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(740, 502)
+        Me.Button1.Location = New System.Drawing.Point(955, 502)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(137, 40)
         Me.Button1.TabIndex = 22
@@ -172,7 +175,7 @@ Partial Class frmViewRoute
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(597, 502)
+        Me.Button2.Location = New System.Drawing.Point(812, 502)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(137, 40)
         Me.Button2.TabIndex = 22
@@ -182,7 +185,7 @@ Partial Class frmViewRoute
         'Button3
         '
         Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.Location = New System.Drawing.Point(454, 502)
+        Me.Button3.Location = New System.Drawing.Point(669, 502)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(137, 40)
         Me.Button3.TabIndex = 22
@@ -201,6 +204,9 @@ Partial Class frmViewRoute
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.lblTotalCases)
+        Me.Panel1.Controls.Add(Me.lblTotalItems)
+        Me.Panel1.Controls.Add(Me.lblTotalOrders)
         Me.Panel1.Controls.Add(Me.ProgressBar1)
         Me.Panel1.Controls.Add(Me.cmbRouteCity)
         Me.Panel1.Controls.Add(Me.chkRouteCity)
@@ -217,8 +223,40 @@ Partial Class frmViewRoute
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(883, 554)
+        Me.Panel1.Size = New System.Drawing.Size(1098, 554)
         Me.Panel1.TabIndex = 24
+        '
+        'lblTotalCases
+        '
+        Me.lblTotalCases.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lblTotalCases.AutoSize = True
+        Me.lblTotalCases.Location = New System.Drawing.Point(535, 502)
+        Me.lblTotalCases.Name = "lblTotalCases"
+        Me.lblTotalCases.Size = New System.Drawing.Size(87, 17)
+        Me.lblTotalCases.TabIndex = 39
+        Me.lblTotalCases.Text = "Total Cases:"
+        Me.lblTotalCases.Visible = False
+        '
+        'lblTotalItems
+        '
+        Me.lblTotalItems.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lblTotalItems.AutoSize = True
+        Me.lblTotalItems.Location = New System.Drawing.Point(411, 502)
+        Me.lblTotalItems.Name = "lblTotalItems"
+        Me.lblTotalItems.Size = New System.Drawing.Size(81, 17)
+        Me.lblTotalItems.TabIndex = 38
+        Me.lblTotalItems.Text = "Total Items:"
+        Me.lblTotalItems.Visible = False
+        '
+        'lblTotalOrders
+        '
+        Me.lblTotalOrders.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lblTotalOrders.AutoSize = True
+        Me.lblTotalOrders.Location = New System.Drawing.Point(230, 502)
+        Me.lblTotalOrders.Name = "lblTotalOrders"
+        Me.lblTotalOrders.Size = New System.Drawing.Size(92, 17)
+        Me.lblTotalOrders.TabIndex = 37
+        Me.lblTotalOrders.Text = "Total Orders:"
         '
         'ProgressBar1
         '
@@ -256,7 +294,7 @@ Partial Class frmViewRoute
         Me.Panel2.Controls.Add(Me.PictureBox1)
         Me.Panel2.Controls.Add(Me.CntlRouteView1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel2.Location = New System.Drawing.Point(890, 0)
+        Me.Panel2.Location = New System.Drawing.Point(1105, 0)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(426, 554)
         Me.Panel2.TabIndex = 25
@@ -276,7 +314,7 @@ Partial Class frmViewRoute
         '
         Me.Splitter1.BackColor = System.Drawing.Color.DarkGray
         Me.Splitter1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Splitter1.Location = New System.Drawing.Point(883, 0)
+        Me.Splitter1.Location = New System.Drawing.Point(1098, 0)
         Me.Splitter1.Name = "Splitter1"
         Me.Splitter1.Size = New System.Drawing.Size(7, 554)
         Me.Splitter1.TabIndex = 26
@@ -285,7 +323,7 @@ Partial Class frmViewRoute
         'btnLoadNcr
         '
         Me.btnLoadNcr.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnLoadNcr.Location = New System.Drawing.Point(780, 7)
+        Me.btnLoadNcr.Location = New System.Drawing.Point(995, 7)
         Me.btnLoadNcr.Name = "btnLoadNcr"
         Me.btnLoadNcr.Size = New System.Drawing.Size(101, 26)
         Me.btnLoadNcr.TabIndex = 34
@@ -308,7 +346,7 @@ Partial Class frmViewRoute
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1316, 554)
+        Me.ClientSize = New System.Drawing.Size(1531, 554)
         Me.Controls.Add(Me.btnLoadNcr)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Splitter1)
@@ -348,4 +386,7 @@ Partial Class frmViewRoute
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents btnLoadNcr As System.Windows.Forms.Button
     Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
+    Friend WithEvents lblTotalOrders As System.Windows.Forms.Label
+    Friend WithEvents lblTotalCases As System.Windows.Forms.Label
+    Friend WithEvents lblTotalItems As System.Windows.Forms.Label
 End Class

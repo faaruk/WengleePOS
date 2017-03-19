@@ -137,6 +137,10 @@ FROM            tblRoute AS R INNER JOIN
           <DataField>SumTotalItems</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="CaseTotal">
+          <DataField>CaseTotal</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="prod1">
           <DataField>prod1</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -2156,8 +2160,76 @@ where R.[RouteId]=4160
         <Width>10.10732in</Width>
         <Style />
       </Tablix>
+      <Textbox Name="Textbox3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!CaseTotal.Value, "dsSummary")</Value>
+                <Style>
+                  <FontSize>20pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>1.24592in</Top>
+        <Left>3.199in</Left>
+        <Height>0.41667in</Height>
+        <Width>2.56468in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BackgroundColor>Gainsboro</BackgroundColor>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox4">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Total: </Value>
+                <Style>
+                  <FontSize>20pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>1.24592in</Top>
+        <Left>1.97461in</Left>
+        <Height>0.41667in</Height>
+        <Width>1.32162in</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BackgroundColor>Gainsboro</BackgroundColor>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>1.23898in</Height>
+    <Height>1.75981in</Height>
     <Style />
   </Body>
   <Width>10.14583in</Width>

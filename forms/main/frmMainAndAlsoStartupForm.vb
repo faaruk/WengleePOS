@@ -381,4 +381,8 @@
         End If
         ShowChild(frmInventoryListFz)
     End Sub
+
+    Private Sub OrderEditLogToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles OrderEditLogToolStripMenuItem.Click
+        frmOrdersEditLog.ShowDialog()
+    End Sub
 End Class

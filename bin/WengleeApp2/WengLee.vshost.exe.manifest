@@ -79,14 +79,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WengLee.exe" size="2597376">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WengLee.exe" size="2685440">
       <assemblyIdentity name="WengLee" version="2.0.0.7" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>tweoWByFja2tA3UgmQCitX+rG/M=</dsig:DigestValue>
+        <dsig:DigestValue>HErcfpF5w+kSCOlTneoRi9GxT9s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

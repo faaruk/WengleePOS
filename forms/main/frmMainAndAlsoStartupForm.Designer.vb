@@ -96,6 +96,7 @@ Partial Class frmMainAndAlsoStartupForm
         Me.btnExit = New System.Windows.Forms.Button()
         Me.tmrVersionChecker = New System.Windows.Forms.Timer(Me.components)
         Me.tmrStartUpdater = New System.Windows.Forms.Timer(Me.components)
+        Me.OrderEditLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.pnlShortcut.SuspendLayout()
@@ -211,7 +212,7 @@ Partial Class frmMainAndAlsoStartupForm
         '
         'ReportsToolStripMenuItem
         '
-        Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LatestOrderCustomerWiseToolStripMenuItem, Me.OrderDetailByCustomerToolStripMenuItem, Me.CaseTotalsToolStripMenuItem, Me.OrdersAfterRouteToolStripMenuItem})
+        Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LatestOrderCustomerWiseToolStripMenuItem, Me.OrderDetailByCustomerToolStripMenuItem, Me.CaseTotalsToolStripMenuItem, Me.OrdersAfterRouteToolStripMenuItem, Me.OrderEditLogToolStripMenuItem})
         Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
         Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
         Me.ReportsToolStripMenuItem.Text = "Reports"
@@ -694,6 +695,12 @@ Partial Class frmMainAndAlsoStartupForm
         '
         Me.tmrStartUpdater.Interval = 120000
         '
+        'OrderEditLogToolStripMenuItem
+        '
+        Me.OrderEditLogToolStripMenuItem.Name = "OrderEditLogToolStripMenuItem"
+        Me.OrderEditLogToolStripMenuItem.Size = New System.Drawing.Size(209, 22)
+        Me.OrderEditLogToolStripMenuItem.Text = "Order Edit Log"
+        '
         'frmMainAndAlsoStartupForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -792,4 +799,5 @@ Partial Class frmMainAndAlsoStartupForm
     Friend WithEvents TasksToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OrdersAfterRouteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents btnFz As System.Windows.Forms.Button
+    Friend WithEvents OrderEditLogToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

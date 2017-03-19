@@ -140,7 +140,19 @@ WHERE
        ]]></tblOrder_update>.Value
         End Get
     End Property
-
+    Private ReadOnly Property tblOrder_update_Order_Status
+        Get
+            Return <tblOrder_update_Order_Status><![CDATA[
+          UPDATE tblOrder SET
+	      [UpdatedDate] = @UpdatedDate 
+          ,[UpdatedBy] = @UpdatedBy 
+          ,[Status] = @Status 
+          ,[StatusDate] = @StatusDate 
+          ,[StatusBy] = @StatusBy  
+	      WHERE OrderId =@OrderId;
+       ]]></tblOrder_update_Order_Status>.Value
+        End Get
+    End Property
     Private ReadOnly Property tblOrder_Delete_By_OrderId
         Get
             Return <tblOrder_Delete><![CDATA[
@@ -573,6 +585,55 @@ WHERE a.OrderId in ( select MAX(OrderId) from tblOrder where CreatedDate in (sel
         End If
         Return OrderId
     End Function
+    Function UpdateOrderStatus(
+                    ByRef UpdatedDate As Date, _
+                    ByRef UpdatedBy As Integer, _
+                    ByRef Status As String, _
+                    ByRef StatusDate As Date, _
+                    ByRef StatusBy As Integer, _
+                    ByRef OrderId As Integer, _
+                   Optional ByVal _conn As SqlConnection = Nothing, Optional ByVal _transac As SqlTransaction = Nothing) As Integer
+        Dim isDisposableItem As Boolean = False
+        Dim objConn As clsConnection = Nothing
+        If _conn Is Nothing Then
+            objConn = New clsConnection
+            _conn = objConn.connect
+            isDisposableItem = True
+        End If
+        Dim comUpdated As New SqlCommand(tblOrder_update_Order_Status, _conn)
+        If Not _transac Is Nothing Then
+            comUpdated.Transaction = _transac
+        End If
+        With comUpdated.Parameters
+            .AddWithValue("@UpdatedDate", UpdatedDate)
+            .AddWithValue("@UpdatedBy", UpdatedBy)
+            .AddWithValue("@Status", Status)
+            .AddWithValue("@StatusDate", StatusDate)
+            .AddWithValue("@StatusBy", StatusBy)
+            .AddWithValue("@OrderId", OrderId)
+        End With
+        Try
+            Dim obj As Object = comUpdated.ExecuteNonQuery
+            If obj = 0 Then
+                Throw New Exception("No Records Updated")
+            End If
+        Catch ex As Exception
+            comUpdated.Dispose()
+            If isDisposableItem Then
+                objConn.Dispose()
+                _conn.Dispose()
+                isDisposableItem = False
+            End If
+            Throw ex
+        End Try
+        comUpdated.Dispose()
+        If isDisposableItem Then
+            objConn.Dispose()
+            _conn.Dispose()
+            isDisposableItem = False
+        End If
+        Return OrderId
+    End Function
     Function Update_field(ByVal _fieldName As FieldName, ByVal value As Object, _
                    Optional ByVal _selectString As String = "", Optional ByVal _params As List(Of SqlParameter) = Nothing, Optional ByVal _conn As SqlConnection = Nothing, Optional ByVal _transac As SqlTransaction = Nothing) As Integer
         Dim isDisposableItem As Boolean = False
@@ -583,7 +644,7 @@ WHERE a.OrderId in ( select MAX(OrderId) from tblOrder where CreatedDate in (sel
             isDisposableItem = True
         End If
 
-        Dim comUpdate As New SqlCommand("Update [tblOrder] Set [" & _fieldName.ToString & "]=@" & _fieldName.ToString & " WHERE 1=1 " & IIf(_selectString <> "", IIf(_selectstring.Trim.ToUpper.StartsWith("AND"), _selectString, " AND " & _selectString), ""), _conn)
+        Dim comUpdate As New SqlCommand("Update [tblOrder] Set [" & _fieldName.ToString & "]=@" & _fieldName.ToString & " WHERE 1=1 " & IIf(_selectString <> "", IIf(_selectString.Trim.ToUpper.StartsWith("AND"), _selectString, " AND " & _selectString), ""), _conn)
         If Not _transac Is Nothing Then
             comUpdate.Transaction = _transac
         End If
@@ -691,11 +752,11 @@ WHERE a.OrderId in ( select MAX(OrderId) from tblOrder where CreatedDate in (sel
 
         Select Case _selection_type
             Case SelectionType.All
-                comSelection.CommandText = tblOrder_Select & IIf(_SelectString <> "", IIf(_selectstring.Trim.ToUpper.StartsWith("AND"), _SelectString, " AND " & _SelectString), "")
+                comSelection.CommandText = tblOrder_Select & IIf(_SelectString <> "", IIf(_SelectString.Trim.ToUpper.StartsWith("AND"), _SelectString, " AND " & _SelectString), "")
             Case SelectionType.ReviewOrder
-                comSelection.CommandText = tblOrder_Select_Review & IIf(_SelectString <> "", IIf(_selectstring.Trim.ToUpper.StartsWith("AND"), _SelectString, " AND " & _SelectString), "")
+                comSelection.CommandText = tblOrder_Select_Review & IIf(_SelectString <> "", IIf(_SelectString.Trim.ToUpper.StartsWith("AND"), _SelectString, " AND " & _SelectString), "")
             Case SelectionType.CustomerWise
-                comSelection.CommandText = tblOrder_Select_CustomerWise & IIf(_SelectString <> "", IIf(_selectstring.Trim.ToUpper.StartsWith("AND"), _SelectString, " AND " & _SelectString), "")
+                comSelection.CommandText = tblOrder_Select_CustomerWise & IIf(_SelectString <> "", IIf(_SelectString.Trim.ToUpper.StartsWith("AND"), _SelectString, " AND " & _SelectString), "")
 
         End Select
 
@@ -815,7 +876,7 @@ WHERE a.OrderId in ( select MAX(OrderId) from tblOrder where CreatedDate in (sel
             isDisposableItem = True
         End If
 
-        Dim comSelectScalar As New SqlCommand("SELECT TOP 1 " & _fieldName.ToString & " [tblOrder] WHERE 1=1 " & IIf(_selectString <> "", IIf(_selectstring.Trim.ToUpper.StartsWith("AND"), _selectString, " AND " & _selectString), ""), _conn)
+        Dim comSelectScalar As New SqlCommand("SELECT TOP 1 " & _fieldName.ToString & " [tblOrder] WHERE 1=1 " & IIf(_selectString <> "", IIf(_selectString.Trim.ToUpper.StartsWith("AND"), _selectString, " AND " & _selectString), ""), _conn)
         If Not _transac Is Nothing Then
             comSelectScalar.Transaction = _transac
         End If
@@ -860,7 +921,7 @@ WHERE a.OrderId in ( select MAX(OrderId) from tblOrder where CreatedDate in (sel
             isDisposableItem = True
         End If
 
-        Dim comSelectDistinct As New SqlCommand("SELECT DISTINCT [" & _fieldName.ToString & "] FROM [tblOrder] WHERE 1=1 " & IIf(_selectString <> "", IIf(_selectstring.Trim.ToUpper.StartsWith("AND"), _selectString, " AND " & _selectString), ""), _conn)
+        Dim comSelectDistinct As New SqlCommand("SELECT DISTINCT [" & _fieldName.ToString & "] FROM [tblOrder] WHERE 1=1 " & IIf(_selectString <> "", IIf(_selectString.Trim.ToUpper.StartsWith("AND"), _selectString, " AND " & _selectString), ""), _conn)
         If Not _transac Is Nothing Then
             comSelectDistinct.Transaction = _transac
         End If
@@ -978,6 +1039,65 @@ WHERE a.OrderId in ( select MAX(OrderId) from tblOrder where CreatedDate in (sel
 
         Return dt
     End Function
+    Function SelectOrdersEditLog(ByVal _additionalCondition As String,
+                                    Optional ByVal _conn As SqlConnection = Nothing, Optional ByVal _transac As SqlTransaction = Nothing) As DataTable
+
+        Dim isDisposableItem As Boolean = False
+        Dim objConn As clsConnection = Nothing
+        If _conn Is Nothing Then
+            objConn = New clsConnection
+            _conn = objConn.connect
+            isDisposableItem = True
+        End If
+        Dim strSQL As String
+
+        strSQL = "SELECT        OL.UpdatedDate, O.OrderNo, O.OrderDate, C.CustomerName, O.Comments, P.ProductName, OL.OldFresh, OL.NewFresh, OL.OldFrozen, OL.NewFrozen,"
+        strSQL += "UD.UserName "
+        strSQL += "FROM "
+        strSQL += "tblOrder AS O INNER JOIN "
+        strSQL += "tblCustomer AS C ON C.CustomerID = O.CutomerId "
+        strSQL += "INNER JOIN tblOrderItemsLog OL on O.OrderId=OL.OrderId "
+        strSQL += "INNER JOIN tblOrderItems OI ON OI.ItemId=OL.ItemId "
+        strSQL += "INNER JOIN tblProducts P ON P.ProductId=OI.ProductId "
+        strSQL += "INNER JOIN tblUserDetails UD ON UD.UserId=OL.UpdatedBy "
+        strSQL += "WHERE (OL.OldFresh <> OL.NewFresh Or OL.OldFrozen <> OL.NewFrozen) "
+        strSQL += _additionalCondition
+        strSQL += "Order by OL.UpdatedDate DESC"
+
+        Dim comSelect As New SqlCommand(strSQL, _conn)
+        If Not _transac Is Nothing Then
+            comSelect.Transaction = _transac
+        End If
+
+        Dim dt As New DataTable
+        Dim daSelection As New SqlDataAdapter(comSelect)
+        Try
+            daSelection.Fill(dt)
+            If dt.Rows.Count = 0 Then
+                Throw New Exception("No Records Found")
+            End If
+        Catch ex As Exception
+
+            comSelect.Dispose()
+            daSelection.Dispose()
+            If isDisposableItem Then
+                objConn.Dispose()
+                _conn.Dispose()
+                isDisposableItem = False
+            End If
+            'Throw ex
+        End Try
+
+        comSelect.Dispose()
+        daSelection.Dispose()
+        If isDisposableItem Then
+            objConn.Dispose()
+            _conn.Dispose()
+            isDisposableItem = False
+        End If
+
+        Return dt
+    End Function
     Function SelectOrdersAfterRoute(ByVal _RouteId As String, ByVal _additionalCondition As String,
                                     Optional ByVal _conn As SqlConnection = Nothing, Optional ByVal _transac As SqlTransaction = Nothing) As DataTable
 
@@ -1048,6 +1168,14 @@ WHERE a.OrderId in ( select MAX(OrderId) from tblOrder where CreatedDate in (sel
         strSQL += " from tblRouteOrders RO inner join tblOrderItems IOI on IOI.OrderId=RO.OrderId"
         strSQL += " inner join tblProducts IOP on IOP.ProductId=IOI.ProductId"
         strSQL += " where RO.RouteID=R.RouteId group by IOP.UnitOfMeasure  FOR XML PATH('')),1,1,'') )) as SumTotalItems,"
+
+        strSQL += " (select (stuff((SELECT ', '+ convert(varchar(50), "
+        strSQL += " sum (IOI.Fresh) + sum (IOI.Frozen))  + ' ' + IOP.UnitOfMeasure  "
+        strSQL += " from tblRouteOrders RO "
+        strSQL += " inner join tblOrderItems IOI on IOI.OrderId=RO.OrderId "
+        strSQL += " inner join tblProducts IOP on IOP.ProductId=IOI.ProductId "
+        strSQL += " where RO.RouteID=R.RouteId and IOP.UnitOfMeasure='Case(s)' group by IOP.UnitOfMeasure  FOR XML PATH('')),1,1,'') )) as CaseTotal, "
+
         strSQL += " (select sum(O.TotalItems) from "
         strSQL += " tblRouteOrders RO inner join tblOrder O "
         strSQL += " on O.OrderId=RO.OrderId"
@@ -1113,17 +1241,26 @@ WHERE a.OrderId in ( select MAX(OrderId) from tblOrder where CreatedDate in (sel
         End If
         Dim strSQL As String
         strSQL = "select * from ( "
-        strSQL += "select convert(varchar(10),R.RouteDate,101) RouteDate, RO.SL, R.OtherInfos, R.Truck, R.Driver, R.RouteId, RO.ItemId, RO.OrderId, O.OrderDate, C.CustomerName, "
+        strSQL += "select convert(varchar(10),R.RouteDate,101) RouteDate, RO.SL, R.OtherInfos, R.Truck, R.Driver, R.RouteId, RO.ItemId, RO.OrderId, O.OrderDate, C.CustomerName, CASE WHEN C.COD=1 THEN 'Yes'else 'No'END as COD, ISNULL( h.Cs,0 ) AS TotalCases, "
         strSQL += " O.Comments, O.BOLAddressID,"
         strSQL += " '' as DropOffPoint,C.Address, C.City, C.State, C.Zip, '' Contact"
         strSQL += " from tblRoute R "
         strSQL += " inner join tblRouteOrders RO on RO.RouteID=R.RouteId "
         strSQL += " inner join tblOrder O on O.OrderId=RO.OrderId "
         strSQL += " inner join tblCustomer C on C.CustomerID=O.CutomerId "
-        strSQL += " and R.[RouteId]=" + RouteId + " "
+
+        strSQL += " LEFT OUTER JOIN( "
+        strSQL += " SELECT a.OrderId,"
+        strSQL += " SUM( a.Fresh + a.Frozen ) AS [Cs]"
+        strSQL += " FROM tblOrderItems a"
+        strSQL += " LEFT OUTER JOIN tblProducts b ON a.ProductId = b.ProductId"
+        strSQL += " WHERE b.UnitOfMeasure = 'Case(s)'"
+        strSQL += " GROUP BY a.OrderId ) h ON RO.OrderId = h.OrderId"
+
+        strSQL += " WHERE R.[RouteId]=" + RouteId + " "
         strSQL += " and O.BOLAddressID=0"
         strSQL += " UNION ALL"
-        strSQL += " select convert(varchar(10),R.RouteDate,101) RouteDate, RO.SL, R.OtherInfos,R.Truck, R.Driver, R.RouteId, RO.ItemId, RO.OrderId, O.OrderDate, C.CustomerName, "
+        strSQL += " select convert(varchar(10),R.RouteDate,101) RouteDate, RO.SL, R.OtherInfos,R.Truck, R.Driver, R.RouteId, RO.ItemId, RO.OrderId, O.OrderDate, C.CustomerName, CASE WHEN C.COD=1 THEN 'Yes'else 'No'END as COD, ISNULL( h.Cs,0 ) AS TotalCases, "
         strSQL += " O.Comments, O.BOLAddressID,"
         strSQL += " B.DropOffPoint as DropOffPoint, B.Address, B.City, B.State, B.Zip, B.Contact"
         strSQL += " from tblRoute R "
@@ -1131,7 +1268,16 @@ WHERE a.OrderId in ( select MAX(OrderId) from tblOrder where CreatedDate in (sel
         strSQL += " inner join tblOrder O on O.OrderId=RO.OrderId "
         strSQL += " inner join tblCustomer C on C.CustomerID=O.CutomerId "
         strSQL += " inner join tblCustomer_BOL B on B.ItemSl=O.BOLAddressID"
-        strSQL += " and R.[RouteId]=" + RouteId + " "
+
+        strSQL += " LEFT OUTER JOIN( "
+        strSQL += " SELECT a.OrderId,"
+        strSQL += " SUM( a.Fresh + a.Frozen ) AS [Cs]"
+        strSQL += " FROM tblOrderItems a"
+        strSQL += " LEFT OUTER JOIN tblProducts b ON a.ProductId = b.ProductId"
+        strSQL += " WHERE b.UnitOfMeasure = 'Case(s)'"
+        strSQL += " GROUP BY a.OrderId ) h ON RO.OrderId = h.OrderId"
+
+        strSQL += " WHERE R.[RouteId]=" + RouteId + " "
         strSQL += " and O.BOLAddressID<>0) A"
         strSQL += " order by SL asc "
         Dim comSelect As New SqlCommand(strSQL, _conn)

@@ -103,7 +103,34 @@ WHERE
                     ]]></tblOrderItems_Delete>.Value
         End Get
     End Property
-
+    Private ReadOnly Property tblOrderItemsLogs_insert
+        Get
+            Return <tblOrderItemsLogs_insert><![CDATA[
+        INSERT INTO [dbo].[tblOrderItemsLog]
+           ([ItemId]
+           ,[OrderId]
+           ,[ProductId]
+           ,[NewQty]
+           ,[OldQty]
+           ,[NewFresh]
+           ,[NewFrozen]
+           ,[OldFresh]
+           ,[OldFrozen]
+           ,[UpdatedBy])
+     VALUES (
+           @ItemId
+           ,@OrderId
+           ,@ProductId
+           ,@NewQty
+           ,@OldQty
+           ,@NewFresh
+           ,@NewFrozen           
+           ,@OldFresh
+           ,@OldFrozen
+           ,@UpdatedBy)
+                    ]]></tblOrderItemsLogs_insert>.Value
+        End Get
+    End Property
     Private ReadOnly Property tblOrderItems_Delete_By_SELECT
         Get
             Return <tblOrderItems_Delete_By_SELECT><![CDATA[
@@ -518,6 +545,68 @@ LEFT OUTER JOIN (select * from tblCustomer_BOL) f on c.[BOLAddressID] = f.ItemSl
             _conn.Dispose()
             isDisposableItem = False
         End If
+        Return ItemId
+    End Function
+    Function InsertUpdate_Log(ByVal ItemId As Integer, _
+                   ByRef OrderId As Integer, _
+                    ByRef ProductId As Integer, _
+                    ByRef NewQty As Integer, _
+                    ByRef OldQty As Integer, _
+                    ByRef NewFresh As Integer, _
+                    ByRef NewFrozen As Integer, _
+                    ByRef OldFresh As Integer, _
+                    ByRef OldFrozen As Integer, _
+                    ByRef UpdatedBy As Integer, _
+                    Optional ByVal _conn As SqlConnection = Nothing, Optional ByVal _transac As SqlTransaction = Nothing) As Integer
+
+
+        Dim isDisposableItem As Boolean = False
+        Dim objConn As clsConnection = Nothing
+        If _conn Is Nothing Then
+            objConn = New clsConnection
+            _conn = objConn.connect
+            isDisposableItem = True
+        End If
+
+        Dim comUpdated As New SqlCommand(tblOrderItemsLogs_insert, _conn)
+        If Not _transac Is Nothing Then
+            comUpdated.Transaction = _transac
+        End If
+        With comUpdated.Parameters
+            .AddWithValue("@OrderId", OrderId)
+            .AddWithValue("@ProductId", ProductId)
+            .AddWithValue("@NewQty", NewQty)
+            .AddWithValue("@OldQty", OldQty)
+            .AddWithValue("@NewFresh", NewFresh)
+            .AddWithValue("@NewFrozen", NewFrozen)
+            .AddWithValue("@OldFresh", OldFresh)
+            .AddWithValue("@OldFrozen", OldFrozen)
+            .AddWithValue("@UpdatedBy", UpdatedBy)
+            .AddWithValue("@ItemId", ItemId)
+        End With
+
+        Try
+            Dim obj As Object = comUpdated.ExecuteNonQuery
+            If obj = 0 Then
+                Throw New Exception("No Records Updated")
+            End If
+        Catch ex As Exception
+            comUpdated.Dispose()
+            If isDisposableItem Then
+                objConn.Dispose()
+                _conn.Dispose()
+                isDisposableItem = False
+            End If
+            Throw ex
+        End Try
+
+        comUpdated.Dispose()
+        If isDisposableItem Then
+            objConn.Dispose()
+            _conn.Dispose()
+            isDisposableItem = False
+        End If
+
         Return ItemId
     End Function
     Function Delete_By_SELECT(ByRef _selectstring As String, Optional ByVal _params As List(Of SqlParameter) = Nothing, _

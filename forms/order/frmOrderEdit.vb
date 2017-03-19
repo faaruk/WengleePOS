@@ -250,6 +250,7 @@
                 Dim itemid As Integer = Val(drItem.Cells(8).Value)
                 If itemid > 0 Then
                     Dim itemdetail As cls_tblOrderItems.Fields = objOrderItems.Selection_One_Row(itemid, conn, transac)
+                    objOrderItems.InsertUpdate_Log(itemid, OrderId, drItem.Cells(0).Value, drItem.Cells(2).Value, itemdetail.Qty, drItem.Cells(6).Value, drItem.Cells(7).Value, itemdetail.Fresh, itemdetail.Frozen, UserId, conn, transac)
                     objOrderItems.Update(itemid, OrderId, CountSl, drItem.Cells(0).Value, drItem.Cells(2).Value, itemdetail.Price, itemdetail.Discount, itemdetail.Extra, itemdetail.Weight, 0, drItem.Cells(6).Value, drItem.Cells(7).Value, "", conn, transac)
                 Else
                     itemid = objOrderItems.Insert(OrderId, CountSl, drItem.Cells(0).Value, drItem.Cells(2).Value, 0, 0, 0, "", 0, drItem.Cells(6).Value, drItem.Cells(7).Value, "", conn, transac)

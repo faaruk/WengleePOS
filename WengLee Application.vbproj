@@ -331,6 +331,12 @@
     <Compile Include="forms\order\frmPickReport.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="forms\reports\frmOrdersEditLog.Designer.vb">
+      <DependentUpon>frmOrdersEditLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\reports\frmOrdersEditLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="forms\route\frmOrdersafterRoute.Designer.vb">
       <DependentUpon>frmOrdersafterRoute.vb</DependentUpon>
     </Compile>
@@ -827,6 +833,10 @@
       <DependentUpon>frmPickReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\order\PickReport.rdlc" />
+    <EmbeddedResource Include="forms\reports\frmOrdersEditLog.resx">
+      <DependentUpon>frmOrdersEditLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\reports\OrdersEditLog.rdlc" />
     <EmbeddedResource Include="forms\route\frmOrdersafterRoute.resx">
       <DependentUpon>frmOrdersafterRoute.vb</DependentUpon>
     </EmbeddedResource>

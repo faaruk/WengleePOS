@@ -85,8 +85,16 @@
                     pp.Add(New SqlParameter("@RC", cmbRouteCity.Text))
                 End If
             End If
+            Dim dt As DataTable = objRoutes.Selection(cls_tblRoute.SelectionType.Review, SelectString, pp)
+            Dim sumTotalOrder As Integer = Convert.ToInt32(dt.Compute("SUM(TotalOrder)", String.Empty))
+            Dim sumTotalItems As Integer = Convert.ToInt32(dt.Compute("SUM(TotalItems)", String.Empty))
+            Dim sumTotalCases As Integer = Convert.ToInt32(dt.Compute("SUM(TotalCases)", String.Empty))
 
-            DataGridView1.DataSource = objRoutes.Selection(cls_tblRoute.SelectionType.Review, SelectString, pp)
+            lblTotalOrders.Text = "Total Orders: " & sumTotalOrder.ToString
+            lblTotalItems.Text = "Total Items: " & sumTotalItems.ToString
+            lblTotalCases.Text = "Total Cases: " & sumTotalCases.ToString
+
+            DataGridView1.DataSource = dt
             DataGridView1.Columns("RouteId").Visible = False
             DataGridView1.Columns("OrderDate").Visible = False
             'DataGridView1.Columns("CreatedBy").Visible = False
@@ -145,8 +153,12 @@
         If e.RowIndex >= 0 Then
 
             If e.ColumnIndex = 0 Then
-                frmRouteReport.RouteId = DataGridView1.SelectedRows(0).Cells("RouteId").Value
+                Dim intRouteId As Integer = DataGridView1.SelectedRows(0).Cells("RouteId").Value
+               
+                ' Show Report
+                frmRouteReport.RouteId = intRouteId
                 frmRouteReport.ShowDialog()
+
                 'try
                 '    dim obj as new clsrouteprint
                 '    obj.createroutesheetpreview(datagridview1.selectedrows(0).cells("routeid").value)

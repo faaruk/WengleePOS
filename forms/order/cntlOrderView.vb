@@ -225,6 +225,27 @@
     End Sub
 
     Private Sub Button1_Click(sender As System.Object, e As System.EventArgs) Handles Button1.Click
+        Dim objConn As clsConnection = New clsConnection
+        Dim conn As SqlConnection = objConn.connect
+        Dim transac As SqlTransaction = conn.BeginTransaction
+        ' When the Pick Report is pressed, then change status of order to picked. Feb 23, 2017
+        Try
+            Dim objOrder As New cls_tblOrder
+            Dim OrderId As Integer = objOrder.UpdateOrderStatus(Now, UserId, "Picked", Now, UserId, OpenOrderId, conn, transac)
+            transac.Commit()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Information, "Info")
+            Try
+                transac.Rollback()
+            Catch ex2 As Exception
+                MsgBox(ex2.Message, MsgBoxStyle.Information, "Info")
+            End Try
+        Finally
+            conn.Close()
+            objConn.Dispose()
+            conn.Dispose()
+            transac.Dispose()
+        End Try
         frmPickReport.OrderId = OpenOrderId
         frmPickReport.ShowDialog()
     End Sub

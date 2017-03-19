@@ -464,6 +464,8 @@ Partial Class frmCustomerAdd
         '
         Me.chkCod.AutoSize = True
         Me.chkCod.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.chkCod.Checked = True
+        Me.chkCod.CheckState = System.Windows.Forms.CheckState.Checked
         Me.chkCod.Location = New System.Drawing.Point(396, 252)
         Me.chkCod.Name = "chkCod"
         Me.chkCod.Size = New System.Drawing.Size(15, 14)
